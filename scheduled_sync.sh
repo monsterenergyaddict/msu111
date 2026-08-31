@@ -9,6 +9,10 @@ DAY_FILE="$STATE/day"
 MORNING="$STATE/morning-success"
 EVENING="$STATE/evening-success-$TODAY"
 
+notify() {
+  /usr/bin/osascript -e "display notification \"$1\" with title \"MSU Schedule\"" >/dev/null 2>&1 || true
+}
+
 if [[ "$SLOT" == "08:30" ]]; then
   if [[ ! -f "$DAY_FILE" || "$(<"$DAY_FILE")" != "$TODAY" ]]; then
     print -r -- "$TODAY" >| "$DAY_FILE"
@@ -26,16 +30,26 @@ run_sync() {
 
 case "$SLOT" in
   08:30)
-    if run_sync; then touch "$MORNING"; fi
+    if run_sync; then touch "$MORNING"; notify "Расписание успешно обновлено (утренняя попытка)."; fi
     ;;
   14:30)
-    [[ -f "$MORNING" ]] || run_sync
+    if [[ -f "$MORNING" ]]; then
+      :
+    elif run_sync; then
+      notify "Расписание успешно обновлено (дневная попытка)."
+    fi
     ;;
   21:30)
-    if run_sync; then touch "$EVENING"; fi
+    if run_sync; then touch "$EVENING"; notify "Расписание успешно обновлено (вечерняя попытка)."; fi
     ;;
   01:40)
     YESTERDAY="$(/bin/date -v-1d +%Y-%m-%d)"
-    [[ -f "$STATE/evening-success-$YESTERDAY" ]] || run_sync
+    if [[ -f "$STATE/evening-success-$YESTERDAY" ]]; then
+      :
+    elif run_sync; then
+      notify "Расписание успешно обновлено (ночная попытка)."
+    else
+      notify "За вчера не удалось обновить расписание. Проверь VPN и доступ к сайту факультета."
+    fi
     ;;
 esac
