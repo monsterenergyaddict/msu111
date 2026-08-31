@@ -9,6 +9,7 @@ cat > "$PLIST" <<EOF
 <plist version="1.0"><dict>
   <key>Label</key><string>ru.msu.philos.schedule</string>
   <key>ProgramArguments</key><array><string>$ROOT/scheduled_sync.sh</string></array>
+  <key>RunAtLoad</key><true/>
   <key>StartCalendarInterval</key><array>
     <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
     <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>30</integer></dict>

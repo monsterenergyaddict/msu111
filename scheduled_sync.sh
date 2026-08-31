@@ -8,6 +8,8 @@ SLOT="$(/bin/date +%H:%M)"
 DAY_FILE="$STATE/day"
 MORNING="$STATE/morning-success"
 EVENING="$STATE/evening-success-$TODAY"
+KNOWN_DAY=""
+[[ -f "$DAY_FILE" ]] && KNOWN_DAY="$(<"$DAY_FILE")"
 
 notify() {
   /usr/bin/osascript -e "display notification \"$1\" with title \"MSU Schedule\"" >/dev/null 2>&1 || true
@@ -50,6 +52,22 @@ case "$SLOT" in
       notify "Расписание успешно обновлено (ночная попытка)."
     else
       notify "За вчера не удалось обновить расписание. Проверь VPN и доступ к сайту факультета."
+    fi
+    ;;
+  *)
+    # RunAtLoad reaches this branch after the Mac was offline during a day.
+    if [[ -n "$KNOWN_DAY" && "$KNOWN_DAY" != "$TODAY" ]]; then
+      YESTERDAY="$(/bin/date -v-1d +%Y-%m-%d)"
+      CATCHUP="$STATE/catchup-$YESTERDAY"
+      if [[ ! -f "$CATCHUP" && ! -f "$STATE/evening-success-$YESTERDAY" ]]; then
+        touch "$CATCHUP"
+        if run_sync; then
+          touch "$MORNING"
+          notify "Расписание обновлено после пропущенных запусков."
+        else
+          notify "За пропущенный день не удалось обновить расписание."
+        fi
+      fi
     fi
     ;;
 esac
