@@ -9,9 +9,30 @@
   },
   "groups": [
     {
+      "id": "109б_РиСО",
+      "calendar": "Расписание 109б_РиСО",
+      "portalId": "1884",
+      "facultyId": "1",
+      "course": "1"
+    },
+    {
+      "id": "110б_РиСО",
+      "calendar": "Расписание 110б_РиСО",
+      "portalId": "1885",
+      "facultyId": "1",
+      "course": "1"
+    },
+    {
       "id": "111б_РиСО",
       "calendar": "Расписание 111б_РиСО",
       "portalId": "1886",
+      "facultyId": "1",
+      "course": "1"
+    },
+    {
+      "id": "112б_РиСО",
+      "calendar": "Расписание 112б_РиСО",
+      "portalId": "1887",
       "facultyId": "1",
       "course": "1"
     }
