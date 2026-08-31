@@ -1,0 +1,19 @@
+{
+  "semester": {
+    "from": "2026-09-01",
+    "to": "2026-12-31"
+  },
+  "portal": {
+    "url": "https://cacs.philos.msu.ru/time-table/group?type=0",
+    "timeoutSeconds": 30
+  },
+  "groups": [
+    {
+      "id": "111б_РиСО",
+      "calendar": "Расписание 111б_РиСО",
+      "portalId": "1886",
+      "facultyId": "1",
+      "course": "1"
+    }
+  ]
+}

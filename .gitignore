@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+logs/
+state.json
+exports/
+.DS_Store
