@@ -12,7 +12,8 @@ for group in "${SOURCES[@]}"; do
   [[ -f "$source" ]] || { echo "Не найден файл $source."; exit 1; }
   cp "$source" "$ROOT/site/${group}.ics"
 done
-git -C "$ROOT" add site/109.ics site/110.ics site/111.ics site/112.ics
+[[ -f "$ROOT/state.json" ]] && cp "$ROOT/state.json" "$ROOT/site/last-updated.json"
+git -C "$ROOT" add site/109.ics site/110.ics site/111.ics site/112.ics site/last-updated.json
 if git -C "$ROOT" diff --cached --quiet -- site/109.ics site/110.ics site/111.ics site/112.ics; then
   echo "GitHub: расписание не изменилось."
   exit 0
