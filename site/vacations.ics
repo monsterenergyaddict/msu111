@@ -17,7 +17,7 @@ BEGIN:VEVENT
 UID:msu-winter-holidays-2027@msu-schedule
 DTSTAMP:20260901T000000Z
 DTSTART;VALUE=DATE:20270125
-DTEND;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
 SUMMARY:Зимние каникулы
 DESCRIPTION:Календарный учебный график РиСО. Даты могут уточняться по официальному графику.
 CATEGORIES:Учёба
