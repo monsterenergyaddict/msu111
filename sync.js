@@ -125,12 +125,12 @@ function eventsFromHtml(html, group, fromDate, toDate) {
     if (day < fromDate || day > toDate) continue;
     let lines = decodeHtml(match[2]).replace(/<br\s*\/?>/gi, "\n").split("\n").map((line) => line.trim()).filter(Boolean);
     if (!lines.length) continue;
-    let interval = lines[0].match(/^(\d{2}:\d{2})\s*-\s*(\d{2}:\d{2})$/);
-    if (interval) lines.shift();
-    else interval = lessonTimes[titleMatch[4]];
+    const customInterval = lines[0].match(/^(\d{2}:\d{2})\s*-\s*(\d{2}:\d{2})$/);
+    let interval = customInterval ? [customInterval[1], customInterval[2]] : lessonTimes[titleMatch[4]];
+    if (customInterval) lines.shift();
     if (!interval || !lines.length) fail(`Неизвестное время ${titleMatch[4]} пары ${day}.`);
-    const start = Array.isArray(interval) ? interval[0] : interval[1];
-    const end = Array.isArray(interval) ? interval[1] : interval[2];
+    const start = interval[0];
+    const end = interval[1];
     const description = lines.slice(1).filter((line) => line !== group.id && !line.startsWith("Добавлено:")).join("\n");
     const event = { groupId: group.id, startsAt: `${day}T${start}`, endsAt: `${day}T${end}`, title: lines[0], description };
     unique[JSON.stringify(event)] = event;
