@@ -3,6 +3,14 @@ const $ = (selector) => document.querySelector(selector);
 
 const state = { records: [], query: "", course: "", date: "" };
 
+function recordWord(count) {
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  if (mod10 === 1 && mod100 !== 11) return "запись";
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return "записи";
+  return "записей";
+}
+
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (character) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
@@ -49,6 +57,8 @@ function normalize(record) {
     ...record,
     course: record.course || "Без предмета",
     courseType: record.courseType || "",
+    lessonNumber: Number.isInteger(record.lessonNumber) ? record.lessonNumber : null,
+    instructor: typeof record.instructor === "string" ? record.instructor.trim() : "",
     title: record.title || "Запись без названия",
     status: record.status === "ready" ? "ready" : "processing",
     topics: Array.isArray(record.topics) ? record.topics.slice(0, 4).filter(Boolean) : []
@@ -71,13 +81,16 @@ function card(record) {
   const summary = ready && record.summary
     ? `<p class="summary">${escapeHtml(record.summary)}</p>`
     : '<p class="summary processing">Plaud ещё обрабатывает запись. Краткое содержание появится автоматически.</p>';
+  const pair = record.lessonNumber ? ` · ${record.lessonNumber} пара` : "";
+  const instructor = record.instructor ? `<p class="instructor">${escapeHtml(record.instructor)}</p>` : "";
   return `<article class="card">
     <div class="card-top">
       <p class="course">${escapeHtml(record.course)}</p>
       ${record.courseType ? `<span class="type">${escapeHtml(record.courseType)}</span>` : ""}
     </div>
     <h3>${escapeHtml(record.title)}</h3>
-    <p class="lesson-meta">${formatTime(record.startedAt)} · ${formatDuration(record.durationSeconds)}</p>
+    <p class="lesson-meta">${formatTime(record.startedAt)} · ${formatDuration(record.durationSeconds)}${pair}</p>
+    ${instructor}
     <span class="status ${record.status}">${status}</span>
     ${summary}
     ${topics}
@@ -100,7 +113,7 @@ function renderFilters() {
 function render() {
   const records = state.records.filter(matches).sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt));
   $("#catalog-count").textContent = records.length === state.records.length
-    ? `${records.length} ${records.length === 1 ? "запись" : "записей"}`
+    ? `${records.length} ${recordWord(records.length)}`
     : `Найдено: ${records.length}`;
   if (!records.length) {
     $("#catalog").innerHTML = '<p class="empty">По этим фильтрам записей пока нет.</p>';
@@ -113,7 +126,7 @@ function render() {
     groups.get(key).push(record);
   });
   $("#catalog").innerHTML = [...groups.entries()].map(([key, dayRecords]) => `<section class="day-group" id="date-${key}">
-    <div class="day-heading"><h2>${escapeHtml(formatDate(dayRecords[0].startedAt))}</h2><span>${dayRecords.length} ${dayRecords.length === 1 ? "запись" : "записи"}</span></div>
+    <div class="day-heading"><h2>${escapeHtml(formatDate(dayRecords[0].startedAt))}</h2><span>${dayRecords.length} ${recordWord(dayRecords.length)}</span></div>
     <div class="cards">${dayRecords.map(card).join("")}</div>
   </section>`).join("");
 }
