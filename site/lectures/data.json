@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-04T16:56:00+03:00",
+  "updatedAt": "2026-09-04T17:04:00+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -41,9 +41,10 @@
       "status": "processing",
       "summary": "",
       "topics": [],
-      "updatedAt": "2026-09-04T15:00:00+03:00",
+      "updatedAt": "2026-09-04T17:04:00+03:00",
       "lessonNumber": 2,
-      "instructor": "Костикова Анна Анатольевна"
+      "instructor": "Костикова Анна Анатольевна",
+      "shareUrl": "https://web.plaud.ai/s/pub_54b1b95c-2a7e-454c-acc8-53a1239ae350::WZTdzM7-cIATwSh9ybMPEHUZIDbusoXBvI6Aace5FvWkid0zRa2IwESHZ4_CR7ADCfo9554TQ8rhc0MC"
     },
     {
       "id": "plaud:6d1c52494ded38ab632493c611bb936e",
@@ -107,9 +108,10 @@
       "status": "processing",
       "summary": "",
       "topics": [],
-      "updatedAt": "2026-09-04T15:00:00+03:00",
+      "updatedAt": "2026-09-04T17:04:00+03:00",
       "lessonNumber": 2,
-      "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна"
+      "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна",
+      "shareUrl": "https://web.plaud.ai/s/pub_3a5098b9-110b-4911-9793-707575c29e9d::eUd6wg93KTXhqjAxHfy2S6_B-UE6XEC5TcKPgQXPMWGNph8q296sItLJck3jNvf_jh356Mh96oMOwSEC"
     },
     {
       "id": "plaud:752b04ee9b216ad3cc7c6b144bd74368",
@@ -125,9 +127,10 @@
       "status": "processing",
       "summary": "",
       "topics": [],
-      "updatedAt": "2026-09-04T15:30:00+03:00",
+      "updatedAt": "2026-09-04T17:04:00+03:00",
       "lessonNumber": 3,
-      "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна"
+      "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна",
+      "shareUrl": "https://web.plaud.ai/s/pub_0c917cd9-aaac-4aec-bac4-8e7a20ba722d::Db8YYbr0RQDdCeP8-oOHwv4syZY_a-RzKDyoa_QIwFJtlF5not7KI6KskVi400kuiZjaQ9GOv36Yh_UC"
     }
   ]
 }
