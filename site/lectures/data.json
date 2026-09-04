@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-04T12:30:26.929Z",
+  "updatedAt": "2026-09-04T15:30:00+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -22,7 +22,6 @@
         "Самостоятельное философское мышление",
         "Современные возможности студентов"
       ],
-      "plaudUrl": "https://web.plaud.ai/file/c9d3eac95b31b7878de5a0041cee1107",
       "updatedAt": "2026-09-04T15:00:00+03:00",
       "lessonNumber": 1,
       "instructor": "Козырев Алексей Павлович"
@@ -41,10 +40,32 @@
       "status": "processing",
       "summary": "",
       "topics": [],
-      "plaudUrl": "https://web.plaud.ai/file/13addd22afe745fc03da277ea3e6e58d",
       "updatedAt": "2026-09-04T15:00:00+03:00",
       "lessonNumber": 2,
       "instructor": "Костикова Анна Анатольевна"
+    },
+    {
+      "id": "plaud:6d1c52494ded38ab632493c611bb936e",
+      "plaudFileId": "6d1c52494ded38ab632493c611bb936e",
+      "source": "schedule",
+      "startedAt": "2026-09-02T12:43:07+03:00",
+      "durationSeconds": 2039,
+      "course": "Физическая культура",
+      "courseType": "Лб",
+      "scheduleUid": "4dc5dd42d363844a@msu-schedule",
+      "scheduledStartsAt": "2026-09-02T12:40:00+03:00",
+      "title": "Организация занятий по физической культуре для первокурсников",
+      "status": "ready",
+      "summary": "Вводная лекция объясняет организацию занятий по физической культуре: расписание, группы здоровья и требования к медицинским справкам. Разобраны распределение в спортивные группы, система баллов для зачёта и порядок отработок.",
+      "topics": [
+        "Справки и группы здоровья",
+        "Распределение по учебным группам",
+        "Баллы и зачёт",
+        "Секции и отработки"
+      ],
+      "updatedAt": "2026-09-04T15:30:00+03:00",
+      "lessonNumber": 3,
+      "instructor": ""
     },
     {
       "id": "plaud:66b5877bfbed1cd4f855c631d2ea9f81",
@@ -65,8 +86,8 @@
         "Работа с философским аргументом",
         "Переход от мифа к понятию"
       ],
-      "plaudUrl": "https://web.plaud.ai/file/66b5877bfbed1cd4f855c631d2ea9f81",
-      "updatedAt": "2026-09-04T15:00:00+03:00",
+      "shareUrl": "https://web.plaud.ai/s/pub_61e6f148-48c5-49cd-a6a1-7f584219484a::ejCDqr0dBb-7qRxdUkBkaid6LbnzPAJIH4UW6AEoLJW7hvO0d1N3WBDyf02SyWEkFmGPpo9GvajD4rkC",
+      "updatedAt": "2026-09-04T15:30:00+03:00",
       "lessonNumber": 1,
       "instructor": "Костикова Анна Анатольевна"
     },
@@ -84,9 +105,26 @@
       "status": "processing",
       "summary": "",
       "topics": [],
-      "plaudUrl": "https://web.plaud.ai/file/13be20d886c84f503e46fdf9b84467cb",
       "updatedAt": "2026-09-04T15:00:00+03:00",
       "lessonNumber": 2,
+      "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна"
+    },
+    {
+      "id": "plaud:752b04ee9b216ad3cc7c6b144bd74368",
+      "plaudFileId": "752b04ee9b216ad3cc7c6b144bd74368",
+      "source": "schedule",
+      "startedAt": "2026-09-03T12:30:24+03:00",
+      "durationSeconds": 5361,
+      "course": "Адаптационная сессия",
+      "courseType": "Доп",
+      "scheduleUid": "be779c6979205128@msu-schedule",
+      "scheduledStartsAt": "2026-09-03T12:30:00+03:00",
+      "title": "Адаптационная сессия",
+      "status": "processing",
+      "summary": "",
+      "topics": [],
+      "updatedAt": "2026-09-04T15:30:00+03:00",
+      "lessonNumber": 3,
       "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна"
     }
   ]
