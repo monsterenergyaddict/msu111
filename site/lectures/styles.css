@@ -145,3 +145,8 @@ footer { padding: 25px 20px; border-top: 2px solid var(--ink); color: var(--mute
   .card { min-height: 0; }
   .card:hover { transform: none; box-shadow: none; }
 }
+
+.open-link.unavailable {
+  opacity: 0.68;
+  cursor: default;
+}
