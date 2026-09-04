@@ -95,3 +95,13 @@ assert.equal(futureDateKey("2026-09-04", 2), "2026-09-06");
 assert.equal(lessonPhase(Date.parse("2026-09-04T08:50:00+03:00"), "2026-09-04T09:00:00+03:00", "2026-09-04T10:30:00+03:00"), "upcoming");
 assert.equal(lessonPhase(Date.parse("2026-09-04T09:20:00+03:00"), "2026-09-04T09:00:00+03:00", "2026-09-04T10:30:00+03:00"), "live");
 assert.equal(lessonPhase(Date.parse("2026-09-04T10:35:00+03:00"), "2026-09-04T09:00:00+03:00", "2026-09-04T10:30:00+03:00"), "finished");
+
+
+function nextStudyDates(dates, today, daysAhead) {
+  return [...new Set(dates.filter((date) => date >= today))].sort().slice(0, daysAhead + 1);
+}
+
+assert.deepEqual(
+  nextStudyDates(["2026-09-04", "2026-09-07", "2026-09-08", "2026-09-11"], "2026-09-04", 2),
+  ["2026-09-04", "2026-09-07", "2026-09-08"]
+);
