@@ -118,8 +118,33 @@ function parseSchedule(ics) {
     if (!groups.has(event.date)) groups.set(event.date, []);
     groups.get(event.date).push(event);
   });
-  return [...groups.values()].flatMap((day) => day.sort((left, right) => new Date(left.startsAt) - new Date(right.startsAt))
-    .map((event, index) => ({ ...event, lessonNumber: index + 1 })));
+  return [...groups.values()].flatMap((day) => {
+    const slots = new Map();
+    day.forEach((event) => {
+      const key = `${event.startsAt}|${event.endsAt}`;
+      if (!slots.has(key)) slots.set(key, []);
+      slots.get(key).push(event);
+    });
+    return [...slots.values()].sort((left, right) => new Date(left[0].startsAt) - new Date(right[0].startsAt))
+      .map((slot, index) => {
+        const first = slot[0];
+        if (slot.length === 1) return { ...first, sourceUids: [first.uid], lessonNumber: index + 1 };
+        const courses = [...new Set(slot.map((event) => event.course))];
+        const types = [...new Set(slot.map((event) => event.courseType).filter(Boolean))];
+        const sameCourse = courses.length === 1;
+        return {
+          ...first,
+          uid: `slot:${first.date}:${first.startsAt}`,
+          sourceUids: slot.map((event) => event.uid),
+          course: sameCourse ? first.course : "Занятие по подгруппе",
+          courseType: types.length === 1 ? types[0] : "",
+          title: sameCourse ? `${first.course} — по подгруппе` : `${courses.join(", ")} — по подгруппе`,
+          instructor: "",
+          note: "Конкретная подгруппа и преподаватель зависят от выбора языка.",
+          lessonNumber: index + 1
+        };
+      });
+  });
 }
 
 function normalize(record) {
@@ -172,9 +197,10 @@ function card(record, event = null) {
   const topics = phase.key === "ready" && record?.topics?.length
     ? `<ul class="topics">${record.topics.map((topic) => `<li>${escapeHtml(topic)}</li>`).join("")}</ul>`
     : "";
+  const message = [phase.message, event?.note].filter(Boolean).join(" ");
   const summary = phase.key === "ready" && record?.summary
     ? `<p class="summary">${escapeHtml(record.summary)}</p>`
-    : `<p class="summary ${phase.key === "processing" ? "processing" : ""}">${escapeHtml(phase.message || "Краткое содержание появится автоматически.")}</p>`;
+    : `<p class="summary ${phase.key === "processing" ? "processing" : ""}">${escapeHtml(message || "Краткое содержание появится автоматически.")}</p>`;
   const share = record?.shareUrl
     ? `<a class="open-link" href="${escapeHtml(record.shareUrl)}" target="_blank" rel="noopener noreferrer">Открыть в Plaud ↗</a>`
     : `<span class="open-link unavailable">${event?.startsAt && new Date(event.startsAt).getTime() > Date.now() ? "Запись появится позже" : "Публичная ссылка готовится"}</span>`;
@@ -215,7 +241,10 @@ function dayHeading(key, count, prefix = "") {
 }
 
 function scheduleDay(key, events, future) {
-  const cards = events.map((event) => card(state.recordsByUid.get(event.uid), event)).join("");
+  const cards = events.map((event) => {
+    const record = [event.uid, ...(event.sourceUids || [])].map((uid) => state.recordsByUid.get(uid)).find(Boolean);
+    return card(record, event);
+  }).join("");
   if (!future) return `<section class="day-group today-group" id="date-${key}">${dayHeading(key, events.length)}<div class="cards">${cards}</div></section>`;
   const open = state.date === key ? " open" : "";
   return `<details class="future-day" id="date-${key}"${open}>
