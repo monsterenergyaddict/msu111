@@ -106,6 +106,7 @@ input:focus, select:focus, a:focus-visible { outline: 3px solid rgba(109, 93, 25
 .status.processing { background: var(--pending-bg); color: var(--pending); }
 .card h3 { margin: 17px 0 8px; font-size: 22px; line-height: 1.08; letter-spacing: -.04em; }
 .lesson-meta { margin: 0; color: var(--muted); font-size: 13px; font-weight: 650; }
+.instructor { margin: 5px 0 0; color: #465168; font-size: 13px; font-weight: 750; }
 .summary { margin: 15px 0 0; color: #333d50; font-size: 14px; }
 .summary.processing { color: var(--muted); font-style: italic; }
 .topics { display: grid; gap: 6px; margin: 16px 0; padding: 0; list-style: none; }
