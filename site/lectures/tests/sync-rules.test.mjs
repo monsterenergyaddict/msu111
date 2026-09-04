@@ -124,3 +124,14 @@ assert.deepEqual(collapseParallelLessons([
   { startsAt: "2026-09-07T12:30:00+03:00", endsAt: "2026-09-07T14:00:00+03:00", course: "Немецкий язык" },
   { startsAt: "2026-09-07T15:00:00+03:00", endsAt: "2026-09-07T16:30:00+03:00", course: "История России" }
 ]), ["Занятие по подгруппе", "История России"]);
+
+
+function publicShareAction(controls) {
+  if (controls.includes("Copy link") && controls.includes("Remove link")) return "reuse";
+  if (controls.includes("Create link")) return "create";
+  return "unavailable";
+}
+
+assert.equal(publicShareAction(["Copy link", "Remove link"]), "reuse");
+assert.equal(publicShareAction(["Create link"]), "create");
+assert.equal(publicShareAction([]), "unavailable");
