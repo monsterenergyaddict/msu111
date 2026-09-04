@@ -1,0 +1,30 @@
+{
+  "timeZone": "Europe/Moscow",
+  "cases": [
+    {
+      "name": "время Plaud нормализуется из UTC в Москву",
+      "recording": { "startAt": "2026-09-03T06:16:05Z", "durationSeconds": 4675 },
+      "expectedLocalStart": "2026-09-03T09:16:05+03:00"
+    },
+    {
+      "name": "явно названная лекция побеждает дубль той же пары",
+      "scheduleUid": "39b1e454af852d43@msu-schedule",
+      "candidates": [
+        { "name": "2026-09-03 12:30:24", "offsetMinutes": 30, "durationSeconds": 5361 },
+        { "name": "09-03 Лекция: Введение в курс философии", "offsetMinutes": 16, "durationSeconds": 4675 }
+      ],
+      "expectedName": "09-03 Лекция: Введение в курс философии"
+    },
+    {
+      "name": "ручная пометка проходит без пары",
+      "recordingName": "Лекция: [Логика] Аристотель",
+      "expectedSource": "manual",
+      "expectedCourse": "Логика"
+    },
+    {
+      "name": "ожидание заметки превращается в готовую карточку",
+      "before": { "status": "processing", "summary": "", "topics": [] },
+      "after": { "status": "ready", "summary": "Краткое содержание", "topics": ["Тезис"] }
+    }
+  ]
+}
