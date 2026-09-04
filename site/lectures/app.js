@@ -1,7 +1,8 @@
 const TIME_ZONE = "Europe/Moscow";
+const LOOKAHEAD_DAYS = 2;
 const $ = (selector) => document.querySelector(selector);
 
-const state = { records: [], query: "", course: "", date: "" };
+const state = { records: [], schedule: [], query: "", course: "", date: "" };
 
 function recordWord(count) {
   const mod10 = count % 10;
@@ -9,6 +10,14 @@ function recordWord(count) {
   if (mod10 === 1 && mod100 !== 11) return "запись";
   if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return "записи";
   return "записей";
+}
+
+function pairWord(count) {
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  if (mod10 === 1 && mod100 !== 11) return "пара";
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return "пары";
+  return "пар";
 }
 
 function escapeHtml(value) {
@@ -21,15 +30,20 @@ function dateParts(value, options) {
   return new Intl.DateTimeFormat("ru-RU", { timeZone: TIME_ZONE, ...options }).formatToParts(new Date(value));
 }
 
-function part(value, type) {
-  return dateParts(value, { year: "numeric", month: "2-digit", day: "2-digit" })
-    .find((item) => item.type === type)?.value || "";
-}
-
 function dateKey(value) {
   const bits = Object.fromEntries(dateParts(value, { year: "numeric", month: "2-digit", day: "2-digit" })
     .filter((item) => ["year", "month", "day"].includes(item.type)).map((item) => [item.type, item.value]));
   return `${bits.year}-${bits.month}-${bits.day}`;
+}
+
+function dateFromKey(key) {
+  return `${key}T12:00:00+03:00`;
+}
+
+function addDays(key, count) {
+  const date = new Date(dateFromKey(key));
+  date.setDate(date.getDate() + count);
+  return dateKey(date);
 }
 
 function formatDate(value) {
@@ -52,6 +66,62 @@ function formatDuration(seconds) {
   return rest ? `${hours} ч ${rest} мин` : `${hours} ч`;
 }
 
+function unescapeIcs(value) {
+  return String(value || "").replace(/\\\\n/gi, "\n").replace(/\\\\,/g, ",").replace(/\\\\;/g, ";").replace(/\\\\\\\\/g, "\\");
+}
+
+function readIcsField(block, name) {
+  const line = block.split("\n").find((item) => item.startsWith(`${name}:`) || item.startsWith(`${name};`));
+  return line ? unescapeIcs(line.slice(line.indexOf(":") + 1)) : "";
+}
+
+function icsDateToIso(value) {
+  const raw = String(value || "").trim();
+  const utc = raw.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})?Z$/);
+  if (utc) return new Date(Date.UTC(+utc[1], +utc[2] - 1, +utc[3], +utc[4], +utc[5], +(utc[6] || 0))).toISOString();
+  const local = raw.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})?$/);
+  if (!local) return "";
+  return `${local[1]}-${local[2]}-${local[3]}T${local[4]}:${local[5]}:${local[6] || "00"}+03:00`;
+}
+
+function courseDetails(summary) {
+  const match = String(summary || "").trim().match(/^(.*?)(?:\s*\[([^\]]+)\])?$/);
+  return { course: (match?.[1] || "Пара по расписанию").trim(), courseType: (match?.[2] || "").trim() };
+}
+
+function instructorFromDescription(description) {
+  const lines = String(description || "").split("\n").map((line) => line.trim()).filter(Boolean);
+  const names = lines.filter((line) => /^[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+$/u.test(line));
+  return names.join(", ");
+}
+
+function parseSchedule(ics) {
+  const unfolded = String(ics || "").replace(/\r?\n[ \t]/g, "");
+  const events = unfolded.split("BEGIN:VEVENT").slice(1).map((chunk) => chunk.split("END:VEVENT")[0]).map((block) => {
+    const startsAt = icsDateToIso(readIcsField(block, "DTSTART"));
+    const endsAt = icsDateToIso(readIcsField(block, "DTEND"));
+    const details = courseDetails(readIcsField(block, "SUMMARY"));
+    return {
+      uid: readIcsField(block, "UID"),
+      startsAt,
+      endsAt,
+      date: startsAt ? dateKey(startsAt) : "",
+      title: details.course,
+      course: details.course,
+      courseType: details.courseType,
+      instructor: instructorFromDescription(readIcsField(block, "DESCRIPTION"))
+    };
+  }).filter((event) => event.uid && event.startsAt && event.endsAt);
+
+  const groups = new Map();
+  events.forEach((event) => {
+    if (!groups.has(event.date)) groups.set(event.date, []);
+    groups.get(event.date).push(event);
+  });
+  return [...groups.values()].flatMap((day) => day.sort((left, right) => new Date(left.startsAt) - new Date(right.startsAt))
+    .map((event, index) => ({ ...event, lessonNumber: index + 1 })));
+}
+
 function normalize(record) {
   return {
     ...record,
@@ -66,73 +136,130 @@ function normalize(record) {
   };
 }
 
-function matches(record) {
-  const haystack = [record.course, record.title, record.summary, record.instructor, ...(record.topics || [])].join(" ").toLocaleLowerCase("ru");
-  return (!state.course || record.course === state.course)
-    && (!state.date || dateKey(record.startedAt) === state.date)
+function hasTextMatch(item) {
+  const haystack = [item.course, item.title, item.summary, item.instructor, ...(item.topics || [])].join(" ").toLocaleLowerCase("ru");
+  return (!state.course || item.course === state.course)
+    && (!state.date || item.date === state.date || dateKey(item.startedAt) === state.date)
     && (!state.query || haystack.includes(state.query.toLocaleLowerCase("ru")));
 }
 
-function card(record) {
-  const ready = record.status === "ready";
-  const status = ready ? "Конспект готов" : "Конспект готовится";
-  const topics = ready && record.topics.length
+function schedulePhase(event, record) {
+  const now = Date.now();
+  const start = new Date(event.startsAt).getTime();
+  const end = new Date(event.endsAt).getTime();
+  if (now < start) return { key: "upcoming", label: "Ещё не началась", message: "Пара запланирована по расписанию." };
+  if (now < end) return { key: "live", label: "В процессе", message: "Пара сейчас идёт. Запись появится после синхронизации с Plaud." };
+  if (record?.status === "ready") return { key: "ready", label: "Конспект готов", message: "" };
+  if (record) return { key: "processing", label: "Конспект готовится", message: "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически." };
+  return { key: "missing", label: "Пара завершена", message: "Запись Plaud пока не найдена." };
+}
+
+function card(record, event = null) {
+  const phase = event ? schedulePhase(event, record) : {
+    key: record.status === "ready" ? "ready" : "processing",
+    label: record.status === "ready" ? "Конспект готов" : "Конспект готовится",
+    message: record.status === "ready" ? "" : "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически."
+  };
+  const title = record?.title || event.title;
+  const course = record?.course || event.course;
+  const courseType = record?.courseType || event.courseType;
+  const instructorValue = event?.instructor || record?.instructor || "";
+  const pair = event?.lessonNumber || record?.lessonNumber;
+  const meta = event
+    ? `${formatTime(event.startsAt)}–${formatTime(event.endsAt)}${pair ? ` · ${pair}-я пара` : ""}`
+    : `${formatTime(record.startedAt)} · ${formatDuration(record.durationSeconds)}${pair ? ` · ${pair}-я пара` : ""}`;
+  const instructor = instructorValue ? `<p class="instructor">${escapeHtml(instructorValue)}</p>` : "";
+  const topics = phase.key === "ready" && record?.topics?.length
     ? `<ul class="topics">${record.topics.map((topic) => `<li>${escapeHtml(topic)}</li>`).join("")}</ul>`
     : "";
-  const summary = ready && record.summary
+  const summary = phase.key === "ready" && record?.summary
     ? `<p class="summary">${escapeHtml(record.summary)}</p>`
-    : '<p class="summary processing">Plaud ещё обрабатывает запись. Краткое содержание появится автоматически.</p>';
-  const pair = record.lessonNumber ? ` · ${record.lessonNumber}-я пара` : "";
-  const instructor = record.instructor ? `<p class="instructor">${escapeHtml(record.instructor)}</p>` : "";
-  const share = record.shareUrl
+    : `<p class="summary ${phase.key === "processing" ? "processing" : ""}">${escapeHtml(phase.message || "Краткое содержание появится автоматически.")}</p>`;
+  const share = record?.shareUrl
     ? `<a class="open-link" href="${escapeHtml(record.shareUrl)}" target="_blank" rel="noopener noreferrer">Открыть в Plaud ↗</a>`
-    : `<span class="open-link unavailable">Публичная ссылка готовится</span>`;
-  return `<article class="card">
+    : `<span class="open-link unavailable">${event?.startsAt && new Date(event.startsAt).getTime() > Date.now() ? "Запись появится позже" : "Публичная ссылка готовится"}</span>`;
+  const source = event ? "Расписание" : "Запись Plaud";
+  const classes = ["card", event ? "schedule-card" : "", phase.key].filter(Boolean).join(" ");
+  return `<article class="${classes}">
     <div class="card-top">
-      <p class="course">${escapeHtml(record.course)}</p>
-      ${record.courseType ? `<span class="type">${escapeHtml(record.courseType)}</span>` : ""}
+      <p class="course">${escapeHtml(course)}</p>
+      ${courseType ? `<span class="type">${escapeHtml(courseType)}</span>` : ""}
     </div>
-    <h3>${escapeHtml(record.title)}</h3>
-    <p class="lesson-meta">${formatTime(record.startedAt)} · ${formatDuration(record.durationSeconds)}${pair}</p>
+    <h3>${escapeHtml(title)}</h3>
+    <p class="lesson-meta">${meta}</p>
     ${instructor}
-    <span class="status ${record.status}">${status}</span>
+    <span class="status ${phase.key}">${phase.label}</span>
     ${summary}
     ${topics}
     <div class="card-footer">
-      <span class="duration">Запись Plaud</span>
+      <span class="duration">${source}</span>
       ${share}
     </div>
   </article>`;
 }
 
 function renderFilters() {
-  const courses = [...new Set(state.records.map((record) => record.course))].sort((a, b) => a.localeCompare(b, "ru"));
-  const dates = [...new Set(state.records.map((record) => dateKey(record.startedAt)))].sort().reverse();
+  const courseNames = [...state.records, ...state.schedule].map((item) => item.course).filter(Boolean);
+  const dates = [...state.records.map((record) => dateKey(record.startedAt)), ...state.schedule.map((event) => event.date)];
+  const courses = [...new Set(courseNames)].sort((a, b) => a.localeCompare(b, "ru"));
+  const uniqueDates = [...new Set(dates)].sort().reverse();
   $("#course-filter").innerHTML = '<option value="">Все предметы</option>' + courses
     .map((course) => `<option value="${escapeHtml(course)}">${escapeHtml(course)}</option>`).join("");
-  $("#date-jump").innerHTML = '<option value="">Все даты</option>' + dates
-    .map((date) => `<option value="${date}">${escapeHtml(formatDate(`${date}T12:00:00+03:00`))}</option>`).join("");
+  $("#date-jump").innerHTML = '<option value="">Все даты</option>' + uniqueDates
+    .map((date) => `<option value="${date}">${escapeHtml(formatDate(dateFromKey(date)))}</option>`).join("");
+}
+
+function dayHeading(key, count, prefix = "") {
+  const label = key === dateKey(new Date()) ? `Сегодня · ${formatDate(dateFromKey(key))}` : formatDate(dateFromKey(key));
+  return `<div class="day-heading"><h2>${escapeHtml(prefix ? `${prefix} · ${label}` : label)}</h2><span>${count} ${pairWord(count)}</span></div>`;
+}
+
+function scheduleDay(key, events, future) {
+  const cards = events.map((event) => card(state.recordsByUid.get(event.uid), event)).join("");
+  if (!future) return `<section class="day-group today-group" id="date-${key}">${dayHeading(key, events.length)}<div class="cards">${cards}</div></section>`;
+  const open = state.date === key ? " open" : "";
+  return `<details class="future-day" id="date-${key}"${open}>
+    <summary>${dayHeading(key, events.length, "Будущий день")}<span class="roll-icon" aria-hidden="true">⌄</span></summary>
+    <div class="cards">${cards}</div>
+  </details>`;
 }
 
 function render() {
-  const records = state.records.filter(matches).sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt));
-  $("#catalog-count").textContent = records.length === state.records.length
-    ? `${records.length} ${recordWord(records.length)}`
-    : `Найдено: ${records.length}`;
-  if (!records.length) {
-    $("#catalog").innerHTML = '<p class="empty">По этим фильтрам записей пока нет.</p>';
-    return;
-  }
-  const groups = new Map();
-  records.forEach((record) => {
-    const key = dateKey(record.startedAt);
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(record);
+  const today = dateKey(new Date());
+  const filteredSchedule = state.schedule.filter(hasTextMatch);
+  const scheduledUids = new Set(state.schedule.map((event) => event.uid));
+  const filteredRecords = state.records.filter((record) => hasTextMatch({ ...record, date: dateKey(record.startedAt) }))
+    .filter((record) => !scheduledUids.has(record.scheduleUid));
+
+  $("#catalog-count").textContent = state.query || state.course || state.date
+    ? `Найдено: ${filteredRecords.length} ${recordWord(filteredRecords.length)}`
+    : `${state.records.length} ${recordWord(state.records.length)} · ${state.schedule.length} ${pairWord(state.schedule.length)} в ближайшие дни`;
+
+  const scheduleGroups = new Map();
+  filteredSchedule.forEach((event) => {
+    if (!scheduleGroups.has(event.date)) scheduleGroups.set(event.date, []);
+    scheduleGroups.get(event.date).push(event);
   });
-  $("#catalog").innerHTML = [...groups.entries()].map(([key, dayRecords]) => `<section class="day-group" id="date-${key}">
-    <div class="day-heading"><h2>${escapeHtml(formatDate(dayRecords[0].startedAt))}</h2><span>${dayRecords.length} ${recordWord(dayRecords.length)}</span></div>
-    <div class="cards">${dayRecords.map(card).join("")}</div>
-  </section>`).join("");
+
+  const sections = [];
+  const todayEvents = scheduleGroups.get(today);
+  if (todayEvents?.length) sections.push(scheduleDay(today, todayEvents, false));
+  [...scheduleGroups.entries()].filter(([key]) => key > today).sort(([left], [right]) => left.localeCompare(right))
+    .forEach(([key, events]) => sections.push(scheduleDay(key, events, true)));
+
+  const historyGroups = new Map();
+  filteredRecords.sort((left, right) => new Date(right.startedAt) - new Date(left.startedAt)).forEach((record) => {
+    const key = dateKey(record.startedAt);
+    if (!historyGroups.has(key)) historyGroups.set(key, []);
+    historyGroups.get(key).push(record);
+  });
+  [...historyGroups.entries()].forEach(([key, records]) => {
+    sections.push(`<section class="day-group history-group" id="date-${key}">${dayHeading(key, records.length, "Записи")}<div class="cards">${records.map((record) => card(record)).join("")}</div></section>`);
+  });
+
+  $("#catalog").innerHTML = sections.length
+    ? sections.join("")
+    : '<p class="empty">По этим фильтрам занятий и записей пока нет.</p>';
 }
 
 function bindControls() {
@@ -143,19 +270,25 @@ function bindControls() {
 
 async function start() {
   try {
-    const response = await fetch("data.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("Catalog unavailable");
-    const data = await response.json();
+    const [catalogResponse, scheduleResponse] = await Promise.all([
+      fetch("data.json", { cache: "no-store" }),
+      fetch("../111.ics", { cache: "no-store" })
+    ]);
+    if (!catalogResponse.ok || !scheduleResponse.ok) throw new Error("Source unavailable");
+    const [data, ics] = await Promise.all([catalogResponse.json(), scheduleResponse.text()]);
     state.records = Array.isArray(data.records) ? data.records.map(normalize) : [];
+    state.recordsByUid = new Map(state.records.filter((record) => record.scheduleUid).map((record) => [record.scheduleUid, record]));
+    const lastDate = addDays(dateKey(new Date()), LOOKAHEAD_DAYS);
+    state.schedule = parseSchedule(ics).filter((event) => event.date >= dateKey(new Date()) && event.date <= lastDate);
     const updated = data.updatedAt ? new Intl.DateTimeFormat("ru-RU", {
       timeZone: TIME_ZONE, dateStyle: "medium", timeStyle: "short"
     }).format(new Date(data.updatedAt)) : "";
-    $("#catalog-updated").textContent = updated ? `обновлено ${updated}` : "";
+    $("#catalog-updated").textContent = updated ? `записи обновлены ${updated}` : "";
     renderFilters();
     bindControls();
     render();
   } catch (_) {
-    $("#catalog-count").textContent = "Каталог временно недоступен";
+    $("#catalog-count").textContent = "Расписание временно недоступно";
     $("#load-error").hidden = false;
   }
 }
