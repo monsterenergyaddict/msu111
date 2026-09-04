@@ -72,7 +72,7 @@ function unescapeIcs(value) {
 
 function readIcsField(block, name) {
   const line = block.split("\n").find((item) => item.startsWith(`${name}:`) || item.startsWith(`${name};`));
-  return line ? unescapeIcs(line.slice(line.indexOf(":") + 1)) : "";
+  return line ? unescapeIcs(line.slice(line.indexOf(":") + 1)).trim() : "";
 }
 
 function icsDateToIso(value) {
