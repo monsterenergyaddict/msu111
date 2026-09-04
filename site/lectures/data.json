@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-04T16:49:00+03:00",
+  "updatedAt": "2026-09-04T16:56:00+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -64,9 +64,10 @@
         "Баллы и зачёт",
         "Секции и отработки"
       ],
-      "updatedAt": "2026-09-04T15:30:00+03:00",
+      "updatedAt": "2026-09-04T16:56:00+03:00",
       "lessonNumber": 3,
-      "instructor": ""
+      "instructor": "",
+      "shareUrl": "https://web.plaud.ai/s/pub_4b0cf798-e9d8-4952-a62c-2609e9c1dea5::6Q3_H8C8w2NT4yJL86wYWHAuC4rLUJgMW6UXLK8IgYwl2eXtglEGcUUOtrokqw0h5tkE0tGQBw4S0D0C"
     },
     {
       "id": "plaud:66b5877bfbed1cd4f855c631d2ea9f81",
