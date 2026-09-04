@@ -66,7 +66,7 @@ function normalize(record) {
 }
 
 function matches(record) {
-  const haystack = [record.course, record.title, record.summary, ...(record.topics || [])].join(" ").toLocaleLowerCase("ru");
+  const haystack = [record.course, record.title, record.summary, record.instructor, ...(record.topics || [])].join(" ").toLocaleLowerCase("ru");
   return (!state.course || record.course === state.course)
     && (!state.date || dateKey(record.startedAt) === state.date)
     && (!state.query || haystack.includes(state.query.toLocaleLowerCase("ru")));
@@ -81,7 +81,7 @@ function card(record) {
   const summary = ready && record.summary
     ? `<p class="summary">${escapeHtml(record.summary)}</p>`
     : '<p class="summary processing">Plaud ещё обрабатывает запись. Краткое содержание появится автоматически.</p>';
-  const pair = record.lessonNumber ? ` · ${record.lessonNumber} пара` : "";
+  const pair = record.lessonNumber ? ` · ${record.lessonNumber}-я пара` : "";
   const instructor = record.instructor ? `<p class="instructor">${escapeHtml(record.instructor)}</p>` : "";
   return `<article class="card">
     <div class="card-top">
