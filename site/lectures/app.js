@@ -260,9 +260,10 @@ function render() {
   const filteredRecords = state.records.filter((record) => hasTextMatch({ ...record, date: dateKey(record.startedAt) }))
     .filter((record) => !scheduledUids.has(record.scheduleUid));
 
+  const recordingCount = new Set(state.records.map((record) => record.plaudFileId || record.id)).size;
   $("#catalog-count").textContent = state.query || state.course || state.date
     ? `Найдено: ${filteredRecords.length} ${recordWord(filteredRecords.length)}`
-    : `${state.records.length} ${recordWord(state.records.length)} · ${state.schedule.length} ${pairWord(state.schedule.length)} в ближайшие дни`;
+    : `${recordingCount} ${recordWord(recordingCount)} · ${state.schedule.length} ${pairWord(state.schedule.length)} в ближайшие дни`;
 
   const scheduleGroups = new Map();
   filteredSchedule.forEach((event) => {
