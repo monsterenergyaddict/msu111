@@ -59,6 +59,7 @@ function normalize(record) {
     courseType: record.courseType || "",
     lessonNumber: Number.isInteger(record.lessonNumber) ? record.lessonNumber : null,
     instructor: typeof record.instructor === "string" ? record.instructor.trim() : "",
+    shareUrl: typeof record.shareUrl === "string" && /^https:\/\/web\.plaud\.ai\/s\/.+/.test(record.shareUrl) ? record.shareUrl : "",
     title: record.title || "Запись без названия",
     status: record.status === "ready" ? "ready" : "processing",
     topics: Array.isArray(record.topics) ? record.topics.slice(0, 4).filter(Boolean) : []
@@ -83,6 +84,9 @@ function card(record) {
     : '<p class="summary processing">Plaud ещё обрабатывает запись. Краткое содержание появится автоматически.</p>';
   const pair = record.lessonNumber ? ` · ${record.lessonNumber}-я пара` : "";
   const instructor = record.instructor ? `<p class="instructor">${escapeHtml(record.instructor)}</p>` : "";
+  const share = record.shareUrl
+    ? `<a class="open-link" href="${escapeHtml(record.shareUrl)}" target="_blank" rel="noopener noreferrer">Открыть в Plaud ↗</a>`
+    : `<span class="open-link unavailable">Публичная ссылка готовится</span>`;
   return `<article class="card">
     <div class="card-top">
       <p class="course">${escapeHtml(record.course)}</p>
@@ -96,7 +100,7 @@ function card(record) {
     ${topics}
     <div class="card-footer">
       <span class="duration">Запись Plaud</span>
-      <a class="open-link" href="${escapeHtml(record.plaudUrl)}" target="_blank" rel="noopener noreferrer">Открыть в Plaud ↗</a>
+      ${share}
     </div>
   </article>`;
 }
