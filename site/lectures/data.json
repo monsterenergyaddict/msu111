@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "timeZone": "Europe/Moscow",
+  "updatedAt": "2026-09-04T15:00:00+03:00",
+  "records": [
+    {
+      "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
+      "plaudFileId": "c9d3eac95b31b7878de5a0041cee1107",
+      "source": "schedule",
+      "startedAt": "2026-09-02T09:04:07+03:00",
+      "durationSeconds": 5271,
+      "course": "Актовая лекция декана",
+      "courseType": "Доп",
+      "scheduleUid": "d71b2df6b5d025d5@msu-schedule",
+      "scheduledStartsAt": "2026-09-02T09:00:00+03:00",
+      "title": "Философия в МГУ",
+      "status": "ready",
+      "summary": "Лекция знакомит с философским факультетом МГУ как со школой мысли и местом, где формируется самостоятельное философское мышление. В ней разобраны история факультета, его традиции и современные образовательные возможности для студентов.",
+      "topics": [
+        "Философский факультет как школа мысли",
+        "История и традиции МГУ",
+        "Самостоятельное философское мышление",
+        "Современные возможности студентов"
+      ],
+      "plaudUrl": "https://web.plaud.ai/file/c9d3eac95b31b7878de5a0041cee1107",
+      "updatedAt": "2026-09-04T15:00:00+03:00"
+    },
+    {
+      "id": "plaud:13addd22afe745fc03da277ea3e6e58d",
+      "plaudFileId": "13addd22afe745fc03da277ea3e6e58d",
+      "source": "schedule",
+      "startedAt": "2026-09-02T10:53:47+03:00",
+      "durationSeconds": 4618,
+      "course": "Введение в специальность",
+      "courseType": "Доп",
+      "scheduleUid": "3c87d94ae767070b@msu-schedule",
+      "scheduledStartsAt": "2026-09-02T10:45:00+03:00",
+      "title": "Введение в специальность",
+      "status": "processing",
+      "summary": "",
+      "topics": [],
+      "plaudUrl": "https://web.plaud.ai/file/13addd22afe745fc03da277ea3e6e58d",
+      "updatedAt": "2026-09-04T15:00:00+03:00"
+    },
+    {
+      "id": "plaud:6d1c52494ded38ab632493c611bb936e",
+      "plaudFileId": "6d1c52494ded38ab632493c611bb936e",
+      "source": "schedule",
+      "startedAt": "2026-09-02T12:43:07+03:00",
+      "durationSeconds": 2039,
+      "course": "Физическая культура",
+      "courseType": "Лб",
+      "scheduleUid": "4dc5dd42d363844a@msu-schedule",
+      "scheduledStartsAt": "2026-09-02T12:40:00+03:00",
+      "title": "Организация занятий по физической культуре",
+      "status": "ready",
+      "summary": "Первая встреча посвящена устройству занятий по физической культуре для первокурсников: расписанию, медицинским справкам и распределению по группам здоровья. Обсуждаются спортивные направления, правила набора баллов для зачёта и порядок отработок пропусков.",
+      "topics": [
+        "Медицинские справки и группы здоровья",
+        "Спортивные направления",
+        "72 балла за семестр",
+        "Отработки пропусков"
+      ],
+      "plaudUrl": "https://web.plaud.ai/file/6d1c52494ded38ab632493c611bb936e",
+      "updatedAt": "2026-09-04T15:00:00+03:00"
+    },
+    {
+      "id": "plaud:66b5877bfbed1cd4f855c631d2ea9f81",
+      "plaudFileId": "66b5877bfbed1cd4f855c631d2ea9f81",
+      "source": "schedule",
+      "startedAt": "2026-09-03T09:16:05+03:00",
+      "durationSeconds": 4675,
+      "course": "История мировой философии",
+      "courseType": "Лк",
+      "scheduleUid": "39b1e454af852d43@msu-schedule",
+      "scheduledStartsAt": "2026-09-03T09:00:00+03:00",
+      "title": "Введение в курс философии, структура и требования",
+      "status": "ready",
+      "summary": "Лекция задаёт структуру курса истории философии, требования к самостоятельной работе и логику экзамена. Главный фокус — работа с первоисточниками, системный конспект и точная реконструкция философских аргументов без подмены их личной оценкой.",
+      "topics": [
+        "Экзамен и критерии оценки",
+        "Конспекты первоисточников",
+        "Работа с философским аргументом",
+        "Переход от мифа к понятию"
+      ],
+      "plaudUrl": "https://web.plaud.ai/file/66b5877bfbed1cd4f855c631d2ea9f81",
+      "updatedAt": "2026-09-04T15:00:00+03:00"
+    },
+    {
+      "id": "plaud:13be20d886c84f503e46fdf9b84467cb",
+      "plaudFileId": "13be20d886c84f503e46fdf9b84467cb",
+      "source": "schedule",
+      "startedAt": "2026-09-03T10:47:20+03:00",
+      "durationSeconds": 5057,
+      "course": "Адаптационная сессия",
+      "courseType": "Доп",
+      "scheduleUid": "6cb3350ba3eb59fa@msu-schedule",
+      "scheduledStartsAt": "2026-09-03T10:45:00+03:00",
+      "title": "Адаптационная сессия",
+      "status": "processing",
+      "summary": "",
+      "topics": [],
+      "plaudUrl": "https://web.plaud.ai/file/13be20d886c84f503e46fdf9b84467cb",
+      "updatedAt": "2026-09-04T15:00:00+03:00"
+    }
+  ]
+}
