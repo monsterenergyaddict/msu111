@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-04T15:30:00+03:00",
+  "updatedAt": "2026-09-04T16:49:00+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -22,9 +22,10 @@
         "Самостоятельное философское мышление",
         "Современные возможности студентов"
       ],
-      "updatedAt": "2026-09-04T15:00:00+03:00",
+      "updatedAt": "2026-09-04T16:49:00+03:00",
       "lessonNumber": 1,
-      "instructor": "Козырев Алексей Павлович"
+      "instructor": "Козырев Алексей Павлович",
+      "shareUrl": "https://web.plaud.ai/s/pub_5b766dbc-b161-4460-b366-2837dbc7043f::My6OaUFGvhXONyflHFb4GrY3ro2XwpYMmQfhTpSTxxWQWrnLLAUG5ok9Zw9N7Tp2VbEAKXbnhj93dcAC"
     },
     {
       "id": "plaud:13addd22afe745fc03da277ea3e6e58d",
