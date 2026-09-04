@@ -1,5 +1,5 @@
 const TIME_ZONE = "Europe/Moscow";
-const LOOKAHEAD_DAYS = 2;
+const LOOKAHEAD_STUDY_DAYS = 2;
 const $ = (selector) => document.querySelector(selector);
 
 const state = { records: [], schedule: [], query: "", course: "", date: "" };
@@ -86,7 +86,7 @@ function icsDateToIso(value) {
 
 function courseDetails(summary) {
   const match = String(summary || "").trim().match(/^(.*?)(?:\s*\[([^\]]+)\])?$/);
-  return { course: (match?.[1] || "Пара по расписанию").trim(), courseType: (match?.[2] || "").trim() };
+  return { course: (match?.[1] || "Пара по расписанию").trim().replace(/^дв(?=[А-ЯЁ])/u, ""), courseType: (match?.[2] || "").trim() };
 }
 
 function instructorFromDescription(description) {
@@ -278,8 +278,11 @@ async function start() {
     const [data, ics] = await Promise.all([catalogResponse.json(), scheduleResponse.text()]);
     state.records = Array.isArray(data.records) ? data.records.map(normalize) : [];
     state.recordsByUid = new Map(state.records.filter((record) => record.scheduleUid).map((record) => [record.scheduleUid, record]));
-    const lastDate = addDays(dateKey(new Date()), LOOKAHEAD_DAYS);
-    state.schedule = parseSchedule(ics).filter((event) => event.date >= dateKey(new Date()) && event.date <= lastDate);
+    const today = dateKey(new Date());
+    const allSchedule = parseSchedule(ics);
+    const visibleDates = [...new Set(allSchedule.map((event) => event.date).filter((date) => date >= today))]
+      .sort().slice(0, LOOKAHEAD_STUDY_DAYS + 1);
+    state.schedule = allSchedule.filter((event) => visibleDates.includes(event.date));
     const updated = data.updatedAt ? new Intl.DateTimeFormat("ru-RU", {
       timeZone: TIME_ZONE, dateStyle: "medium", timeStyle: "short"
     }).format(new Date(data.updatedAt)) : "";
