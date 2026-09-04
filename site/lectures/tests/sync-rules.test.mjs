@@ -105,3 +105,22 @@ assert.deepEqual(
   nextStudyDates(["2026-09-04", "2026-09-07", "2026-09-08", "2026-09-11"], "2026-09-04", 2),
   ["2026-09-04", "2026-09-07", "2026-09-08"]
 );
+
+
+function collapseParallelLessons(events) {
+  const slots = new Map();
+  events.forEach((event) => {
+    const key = `${event.startsAt}|${event.endsAt}`;
+    if (!slots.has(key)) slots.set(key, []);
+    slots.get(key).push(event);
+  });
+  return [...slots.values()].map((slot) => [...new Set(slot.map((event) => event.course))].length === 1
+    ? slot[0].course
+    : "Занятие по подгруппе");
+}
+
+assert.deepEqual(collapseParallelLessons([
+  { startsAt: "2026-09-07T12:30:00+03:00", endsAt: "2026-09-07T14:00:00+03:00", course: "Английский язык" },
+  { startsAt: "2026-09-07T12:30:00+03:00", endsAt: "2026-09-07T14:00:00+03:00", course: "Немецкий язык" },
+  { startsAt: "2026-09-07T15:00:00+03:00", endsAt: "2026-09-07T16:30:00+03:00", course: "История России" }
+]), ["Занятие по подгруппе", "История России"]);
