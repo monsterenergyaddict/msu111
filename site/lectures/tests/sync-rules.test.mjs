@@ -60,3 +60,20 @@ assert.deepEqual(scheduleDetails([
   { uid: "first", startAt: "2026-09-02T09:00:00+03:00", description: "ауд. В2\\nКозырев Алексей Павлович" },
   { uid: "second", startAt: "2026-09-02T10:45:00+03:00", description: "ауд. В2\\nКостикова Анна Анатольевна" }
 ], "second"), { lessonNumber: 2, instructor: "Костикова Анна Анатольевна" });
+
+function qualifiesByOverlap(recording, lesson) {
+  const start = new Date(recording.startedAt).getTime();
+  const end = start + recording.durationSeconds * 1000;
+  const lessonStart = new Date(lesson.startsAt).getTime();
+  const lessonEnd = new Date(lesson.endsAt).getTime();
+  return Math.max(0, Math.min(end, lessonEnd) - Math.max(start, lessonStart)) >= 5 * 60 * 1000;
+}
+
+assert.equal(qualifiesByOverlap(
+  { startedAt: "2026-09-02T12:43:07+03:00", durationSeconds: 2039 },
+  { startsAt: "2026-09-02T12:40:00+03:00", endsAt: "2026-09-02T14:10:00+03:00" }
+), true);
+assert.equal(qualifiesByOverlap(
+  { startedAt: "2026-09-02T12:43:07+03:00", durationSeconds: 120 },
+  { startsAt: "2026-09-02T12:40:00+03:00", endsAt: "2026-09-02T14:10:00+03:00" }
+), false);
