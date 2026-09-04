@@ -150,3 +150,74 @@ footer { padding: 25px 20px; border-top: 2px solid var(--ink); color: var(--mute
   opacity: 0.68;
   cursor: default;
 }
+
+
+:root {
+  --upcoming: #5e677a;
+  --upcoming-bg: #e7eaf0;
+  --live: #9e3b70;
+  --live-bg: #ffe0ef;
+  --finished: #586176;
+  --finished-bg: #edf0f5;
+}
+.status.upcoming { background: var(--upcoming-bg); color: var(--upcoming); }
+.status.live { background: var(--live-bg); color: var(--live); }
+.status.missing { background: var(--finished-bg); color: var(--finished); }
+.schedule-card.upcoming {
+  border-color: #aeb6c6;
+  color: #5c6577;
+  background: #eef0f5;
+  box-shadow: none;
+}
+.schedule-card.upcoming .course,
+.schedule-card.upcoming h3,
+.schedule-card.upcoming .instructor { color: inherit; }
+.schedule-card.upcoming .type { background: #dce1ea; color: #697286; }
+.schedule-card.upcoming .summary { color: #6b7486; }
+.schedule-card.upcoming:hover { transform: none; box-shadow: none; }
+.schedule-card.live { border-color: #d164a0; box-shadow: 5px 6px 0 #f4b6d7; }
+.today-group { scroll-margin-top: 92px; }
+.future-day {
+  display: block;
+  scroll-margin-top: 92px;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: #e9ecf4;
+}
+.future-day > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 17px 19px;
+  cursor: pointer;
+  list-style: none;
+}
+.future-day > summary::-webkit-details-marker { display: none; }
+.future-day .day-heading {
+  flex: 1;
+  padding: 0;
+  border: 0;
+}
+.future-day .day-heading h2 { font-size: clamp(20px, 3.5vw, 27px); }
+.future-day .roll-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--ink);
+  font-size: 21px;
+  font-weight: 900;
+  transition: transform .18s ease;
+}
+.future-day[open] .roll-icon { transform: rotate(180deg); }
+.future-day > .cards { padding: 0 17px 17px; }
+
+@media (max-width: 680px) {
+  .future-day > summary { padding: 14px; }
+  .future-day > .cards { padding: 0 12px 12px; }
+  .future-day .day-heading span { font-size: 12px; }
+}
