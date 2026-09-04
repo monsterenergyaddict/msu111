@@ -221,3 +221,39 @@ footer { padding: 25px 20px; border-top: 2px solid var(--ink); color: var(--mute
   .future-day > .cards { padding: 0 12px 12px; }
   .future-day .day-heading span { font-size: 12px; }
 }
+
+.accuracy-note {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin: 0 0 24px;
+  padding: 15px 17px;
+  border: 1px solid #ddc56a;
+  border-radius: 16px;
+  color: #5e4a10;
+  background: #fff8d9;
+}
+.accuracy-note-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  color: #fff;
+  background: #947417;
+  font-weight: 900;
+}
+.accuracy-note h2 {
+  margin: 0 0 2px;
+  font-size: 15px;
+  letter-spacing: -.02em;
+}
+.accuracy-note p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+@media (max-width: 680px) {
+  .accuracy-note { grid-template-columns: 27px 1fr; padding: 14px; }
+}
