@@ -77,3 +77,21 @@ assert.equal(qualifiesByOverlap(
   { startedAt: "2026-09-02T12:43:07+03:00", durationSeconds: 120 },
   { startsAt: "2026-09-02T12:40:00+03:00", endsAt: "2026-09-02T14:10:00+03:00" }
 ), false);
+
+
+function futureDateKey(today, offset) {
+  const date = new Date(`${today}T12:00:00+03:00`);
+  date.setDate(date.getDate() + offset);
+  return date.toISOString().slice(0, 10);
+}
+
+function lessonPhase(now, startsAt, endsAt) {
+  if (now < new Date(startsAt).getTime()) return "upcoming";
+  if (now < new Date(endsAt).getTime()) return "live";
+  return "finished";
+}
+
+assert.equal(futureDateKey("2026-09-04", 2), "2026-09-06");
+assert.equal(lessonPhase(Date.parse("2026-09-04T08:50:00+03:00"), "2026-09-04T09:00:00+03:00", "2026-09-04T10:30:00+03:00"), "upcoming");
+assert.equal(lessonPhase(Date.parse("2026-09-04T09:20:00+03:00"), "2026-09-04T09:00:00+03:00", "2026-09-04T10:30:00+03:00"), "live");
+assert.equal(lessonPhase(Date.parse("2026-09-04T10:35:00+03:00"), "2026-09-04T09:00:00+03:00", "2026-09-04T10:30:00+03:00"), "finished");
