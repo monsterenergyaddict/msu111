@@ -257,3 +257,60 @@ footer { padding: 25px 20px; border-top: 2px solid var(--ink); color: var(--mute
 @media (max-width: 680px) {
   .accuracy-note { grid-template-columns: 27px 1fr; padding: 14px; }
 }
+
+
+.study-materials {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin: 0 0 24px;
+  padding: 17px;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: #e9e6ff;
+  box-shadow: 4px 5px 0 var(--ink);
+}
+.study-materials-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--lime);
+  font-weight: 900;
+}
+.study-materials h2 {
+  margin: 0 0 3px;
+  font-size: 16px;
+  letter-spacing: -.025em;
+}
+.study-materials p {
+  margin: 0;
+  color: #414a64;
+  font-size: 14px;
+}
+.material-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.material-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  background: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.material-link:hover { color: #fff; background: var(--ink); }
+@media (max-width: 680px) {
+  .study-materials { grid-template-columns: 27px 1fr; padding: 14px; box-shadow: 3px 4px 0 var(--ink); }
+}
