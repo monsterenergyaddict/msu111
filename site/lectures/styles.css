@@ -315,3 +315,4 @@ footer { padding: 25px 20px; border-top: 2px solid var(--ink); color: var(--mute
   .study-materials { grid-template-columns: 27px 1fr; padding: 14px; box-shadow: 3px 4px 0 var(--ink); }
 }
 \n.status.cancelled { background: var(--cancelled-bg); color: var(--cancelled); }\n.schedule-card.cancelled { border-color: #d67a93; background: #fff3f6; }\n.top-links { display: flex; align-items: center; gap: 16px; }\n@media (max-width: 680px) { .top-links { gap: 9px; } }\n
+.maintenance-note { margin: -10px 0 24px; padding: 10px 14px; border: 1px solid #cbd2e1; border-radius: 12px; color: #5f687b; background: #eef1f7; font-size: 12px; }\n.maintenance-note p { margin: 0; }\n
