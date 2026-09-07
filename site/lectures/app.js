@@ -156,7 +156,7 @@ function normalize(record) {
     instructor: typeof record.instructor === "string" ? record.instructor.trim() : "",
     shareUrl: typeof record.shareUrl === "string" && /^https:\/\/web\.plaud\.ai\/s\/.+/.test(record.shareUrl) ? record.shareUrl : "",
     title: record.title || "Запись без названия",
-    status: record.status === "ready" ? "ready" : "processing",
+    status: ["ready", "cancelled"].includes(record.status) ? record.status : "processing",
     topics: Array.isArray(record.topics) ? record.topics.slice(0, 4).filter(Boolean) : []
   };
 }
