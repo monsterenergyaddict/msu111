@@ -174,7 +174,7 @@ function schedulePhase(event, record) {
   const end = new Date(event.endsAt).getTime();
   if (now < start) return { key: "upcoming", label: "Ещё не началась", message: "Пара запланирована по расписанию." };
   if (now < end) return { key: "live", label: "В процессе", message: "Пара сейчас идёт. Запись появится после синхронизации с Plaud." };
-  if (record?.status === "ready") return { key: "ready", label: "Конспект готов", message: "" };
+  if (record?.status === "cancelled") return { key: "cancelled", label: "Пара отменена", message: record.summary || "По расписанию пара отменена." };\n  if (record?.status === "ready") return { key: "ready", label: "Конспект готов", message: "" };
   if (record) return { key: "processing", label: "Конспект готовится", message: "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически." };
   return { key: "missing", label: "Пара завершена", message: "Запись Plaud пока не найдена." };
 }
@@ -198,12 +198,12 @@ function card(record, event = null) {
     ? `<ul class="topics">${record.topics.map((topic) => `<li>${escapeHtml(topic)}</li>`).join("")}</ul>`
     : "";
   const message = [phase.message, event?.note].filter(Boolean).join(" ");
-  const summary = phase.key === "ready" && record?.summary
+  const summary = (phase.key === "ready" || phase.key === "cancelled") && record?.summary
     ? `<p class="summary">${escapeHtml(record.summary)}</p>`
     : `<p class="summary ${phase.key === "processing" ? "processing" : ""}">${escapeHtml(message || "Краткое содержание появится автоматически.")}</p>`;
   const share = record?.shareUrl
     ? `<a class="open-link" href="${escapeHtml(record.shareUrl)}" target="_blank" rel="noopener noreferrer">Открыть в Plaud ↗</a>`
-    : `<span class="open-link unavailable">${event?.startsAt && new Date(event.startsAt).getTime() > Date.now() ? "Запись появится позже" : "Публичная ссылка готовится"}</span>`;
+    : `<span class="open-link unavailable">${phase.key === "cancelled" ? "Записи нет" : (event?.startsAt && new Date(event.startsAt).getTime() > Date.now() ? "Запись появится позже" : "Публичная ссылка готовится")}</span>`;
   const source = event ? "Расписание" : "Запись Plaud";
   const classes = ["card", event ? "schedule-card" : "", phase.key].filter(Boolean).join(" ");
   return `<article class="${classes}">
