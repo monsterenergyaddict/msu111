@@ -174,7 +174,8 @@ function schedulePhase(event, record) {
   const end = new Date(event.endsAt).getTime();
   if (now < start) return { key: "upcoming", label: "Ещё не началась", message: "Пара запланирована по расписанию." };
   if (now < end) return { key: "live", label: "В процессе", message: "Пара сейчас идёт. Запись появится после синхронизации с Plaud." };
-  if (record?.status === "cancelled") return { key: "cancelled", label: "Пара отменена", message: record.summary || "По расписанию пара отменена." };\n  if (record?.status === "ready") return { key: "ready", label: "Конспект готов", message: "" };
+  if (record?.status === "cancelled") return { key: "cancelled", label: "Пара отменена", message: record.summary || "По расписанию пара отменена." };
+  if (record?.status === "ready") return { key: "ready", label: "Конспект готов", message: "" };
   if (record) return { key: "processing", label: "Конспект готовится", message: "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически." };
   return { key: "missing", label: "Пара завершена", message: "Запись Plaud пока не найдена." };
 }
