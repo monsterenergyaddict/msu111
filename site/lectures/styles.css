@@ -11,7 +11,7 @@
   --pending: #9a6700;
   --pending-bg: #fff4cc;
   --ready: #0a7048;
-  --ready-bg: #dff8e9;
+  --ready-bg: #dff8e9;\n  --cancelled: #8c364f;\n  --cancelled-bg: #ffe3ea;
 }
 * { box-sizing: border-box; }
 body {
@@ -314,3 +314,4 @@ footer { padding: 25px 20px; border-top: 2px solid var(--ink); color: var(--mute
 @media (max-width: 680px) {
   .study-materials { grid-template-columns: 27px 1fr; padding: 14px; box-shadow: 3px 4px 0 var(--ink); }
 }
+\n.status.cancelled { background: var(--cancelled-bg); color: var(--cancelled); }\n.schedule-card.cancelled { border-color: #d67a93; background: #fff3f6; }\n.top-links { display: flex; align-items: center; gap: 16px; }\n@media (max-width: 680px) { .top-links { gap: 9px; } }\n
