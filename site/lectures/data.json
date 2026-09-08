@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-08T11:11:36+03:00",
+  "updatedAt": "2026-09-08T12:34:31+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -288,6 +288,24 @@
       "updatedAt": "2026-09-08T11:11:36+03:00",
       "lessonNumber": 1,
       "instructor": "Нестерова Ксения Александровна"
+    },
+    {
+      "id": "plaud:8a15da31324066d7b78805eee00471b8",
+      "plaudFileId": "8a15da31324066d7b78805eee00471b8",
+      "source": "schedule",
+      "startedAt": "2026-09-08T10:52:50+03:00",
+      "durationSeconds": 1197,
+      "course": "Информатика",
+      "courseType": "Пз",
+      "scheduleUid": "527cc11d693de9e2@msu-schedule",
+      "scheduledStartsAt": "2026-09-08T10:45:00+03:00",
+      "title": "Информатика",
+      "status": "processing",
+      "summary": "",
+      "topics": [],
+      "updatedAt": "2026-09-08T12:34:31+03:00",
+      "lessonNumber": 2,
+      "instructor": "Петров Павел Андреевич"
     }
   ]
 }
