@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-08T12:34:31+03:00",
+  "updatedAt": "2026-09-09T11:22:11+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -306,6 +306,24 @@
       "updatedAt": "2026-09-08T12:34:31+03:00",
       "lessonNumber": 2,
       "instructor": "Петров Павел Андреевич"
+    },
+    {
+      "id": "plaud:26592781d4784697b5566ca4f43f7d52",
+      "plaudFileId": "26592781d4784697b5566ca4f43f7d52",
+      "source": "schedule",
+      "startedAt": "2026-09-09T09:25:48+03:00",
+      "durationSeconds": 3484,
+      "course": "История мировой литературы",
+      "courseType": "Сем",
+      "scheduleUid": "bbc80aef58e5bf4e@msu-schedule",
+      "scheduledStartsAt": "2026-09-09T09:00:00+03:00",
+      "title": "История мировой литературы",
+      "status": "processing",
+      "summary": "",
+      "topics": [],
+      "updatedAt": "2026-09-09T11:22:11+03:00",
+      "lessonNumber": 1,
+      "instructor": "Карпухина Светлана Павловна"
     }
   ]
 }
