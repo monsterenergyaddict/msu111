@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-09T11:22:11+03:00",
+  "updatedAt": "2026-09-09T13:00:00+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -324,6 +324,24 @@
       "updatedAt": "2026-09-09T11:22:11+03:00",
       "lessonNumber": 1,
       "instructor": "Карпухина Светлана Павловна"
+    },
+    {
+      "id": "plaud:a6d986ad0369eec0dcb98d6c35eda39a",
+      "plaudFileId": "a6d986ad0369eec0dcb98d6c35eda39a",
+      "source": "schedule",
+      "startedAt": "2026-09-09T10:49:15+03:00",
+      "durationSeconds": 5002,
+      "course": "Русский язык и культура речи",
+      "courseType": "Лк",
+      "scheduleUid": "3be4b4cc183835b1@msu-schedule",
+      "scheduledStartsAt": "2026-09-09T10:45:00+03:00",
+      "title": "Русский язык и культура речи",
+      "status": "processing",
+      "summary": "",
+      "topics": [],
+      "updatedAt": "2026-09-09T13:00:00+03:00",
+      "lessonNumber": 2,
+      "instructor": "Арутюнова Марина Араиковна"
     }
   ]
 }
