@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-10T08:21:56.898Z",
+  "updatedAt": "2026-09-10T08:24:37.441Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -555,11 +555,11 @@
       "courseType": "Лб",
       "title": "Физическая культура",
       "instructor": "",
-      "status": "processing",
+      "status": "cancelled",
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 3,
-      "updatedAt": "2026-09-10T08:21:56.898Z"
+      "updatedAt": "2026-09-10T08:23:57.934Z"
     },
     {
       "id": "schedule:9b78ffb10407b15f@msu-schedule",
@@ -572,11 +572,13 @@
       "courseType": "Лк",
       "title": "История мировой философии",
       "instructor": "Чугайнова Юлия Игоревна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "status": "ready",
+      "summary": "",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-10T08:21:56.898Z"
+      "updatedAt": "2026-09-10T08:23:44.136Z",
+      "plaudFileId": "c43a6bb63acb6186f0c2f0e6f9fcac98",
+      "shareUrl": "https://web.plaud.ai/s/pub_6fac8fa8-dd7c-4f08-a252-5c5f90725f24::EDuuv8ihJnroIEyrUEGgE1YmKTDVxxmROGdmGt1UeD3bYuUa8b40DRhLabhtt2Nc6VLOdrF4m1hG1DIC"
     }
   ]
 }
