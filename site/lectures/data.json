@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-10T09:00:00+03:00",
+  "updatedAt": "2026-09-10T09:30:00+03:00",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -264,7 +264,8 @@
       ],
       "updatedAt": "2026-09-08T11:11:36+03:00",
       "lessonNumber": 2,
-      "instructor": "Ткаченко Виктория Владимировна"
+      "instructor": "Ткаченко Виктория Владимировна",
+      "shareUrl": "https://web.plaud.ai/s/pub_b64bfe11-eaa7-44fb-99ec-f8379d4ecea8::kpuB7u-K2xnGxhKZk8CJaec_cztqrE49OjfMjSqZjywe4SRHb2qcn3K5hyAsEPQJxXsmrefnjns8uKcC"
     },
     {
       "id": "plaud:362baa4a8c062ad6affadab5db30eba7",
@@ -287,7 +288,8 @@
       ],
       "updatedAt": "2026-09-08T11:11:36+03:00",
       "lessonNumber": 1,
-      "instructor": "Нестерова Ксения Александровна"
+      "instructor": "Нестерова Ксения Александровна",
+      "shareUrl": "https://web.plaud.ai/s/pub_d04086b9-41b0-4b78-ad64-2d3f192d4e52::61M4cAu8_06yC2XOwIJLsNe58689KnbMbDkXhoEsDI9sEyi_tTofo1ycwFJ_hBOJ6I3-7q8iQ8U2GAUC"
     },
     {
       "id": "plaud:8a15da31324066d7b78805eee00471b8",
@@ -310,7 +312,8 @@
       ],
       "updatedAt": "2026-09-10T09:00:00+03:00",
       "lessonNumber": 2,
-      "instructor": "Петров Павел Андреевич"
+      "instructor": "Петров Павел Андреевич",
+      "shareUrl": "https://web.plaud.ai/s/pub_009717c6-606c-4107-90a1-e4d716e7e642::iH2klzKoez4lIsZq26F2y0lZMc1gBj0CdtsSHoazdfBCzPA6A9UJvcYDkCult3R7N4O0v_RTuSN6xEEC"
     },
     {
       "id": "plaud:26592781d4784697b5566ca4f43f7d52",
@@ -351,7 +354,8 @@
       ],
       "updatedAt": "2026-09-10T09:00:00+03:00",
       "lessonNumber": 2,
-      "instructor": "Арутюнова Марина Араиковна"
+      "instructor": "Арутюнова Марина Араиковна",
+      "shareUrl": "https://web.plaud.ai/s/pub_03c3ac67-8f8f-4442-8a9c-b7fd012f34f8::PpTsQ4lhdeFD2j5QXGYMb1aI87yFXP7WH-mIhPImrnrarP9yKxQolSiW0TH2vAPSTe9tGy--ugYxnlYC"
     }
   ]
 }
