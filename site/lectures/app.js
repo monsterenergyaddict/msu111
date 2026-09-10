@@ -182,9 +182,9 @@ function schedulePhase(event, record) {
 
 function card(record, event = null) {
   const phase = event ? schedulePhase(event, record) : {
-    key: record.status === "ready" ? "ready" : "processing",
-    label: record.status === "ready" ? "Конспект готов" : "Конспект готовится",
-    message: record.status === "ready" ? "" : "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически."
+    key: record.status === "cancelled" ? "cancelled" : (record.status === "ready" ? "ready" : "processing"),
+    label: record.status === "cancelled" ? "Пара отменена" : (record.status === "ready" ? "Конспект готов" : "Конспект готовится"),
+    message: record.status === "cancelled" ? (record.summary || "По расписанию пара отменена.") : (record.status === "ready" ? "" : "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически.")
   };
   const title = record?.title || event.title;
   const course = record?.course || event.course;
