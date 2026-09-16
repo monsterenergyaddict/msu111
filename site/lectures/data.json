@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-16T07:30:47.883Z",
+  "updatedAt": "2026-09-16T09:15:40.888Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -919,6 +919,23 @@
       "topics": [],
       "lessonNumber": 1,
       "updatedAt": "2026-09-16T07:30:47.883Z"
+    },
+    {
+      "id": "schedule:804a2f8869cb3395@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "804a2f8869cb3395@msu-schedule",
+      "scheduledStartsAt": "2026-09-16T10:45:00+03:00",
+      "startedAt": "2026-09-16T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Русский язык и культура речи",
+      "courseType": "Лк",
+      "title": "Русский язык и культура речи",
+      "instructor": "Арутюнова Марина Араиковна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-09-16T09:15:40.888Z"
     }
   ]
 }
