@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-18T09:15:20.960Z",
+  "updatedAt": "2026-09-18T11:15:09.654Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1242,6 +1242,23 @@
       "topics": [],
       "lessonNumber": 2,
       "updatedAt": "2026-09-18T09:15:20.960Z"
+    },
+    {
+      "id": "schedule:a786bf20e6218d08@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "a786bf20e6218d08@msu-schedule",
+      "scheduledStartsAt": "2026-09-18T12:40:00+03:00",
+      "startedAt": "2026-09-18T12:40:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Физическая культура",
+      "courseType": "Лб",
+      "title": "Физическая культура",
+      "instructor": "",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 3,
+      "updatedAt": "2026-09-18T11:15:09.654Z"
     }
   ]
 }
