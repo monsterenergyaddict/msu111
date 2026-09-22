@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-22T07:30:41.834Z",
+  "updatedAt": "2026-09-22T09:15:40.915Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1557,6 +1557,23 @@
       "topics": [],
       "lessonNumber": 1,
       "updatedAt": "2026-09-22T07:30:41.834Z"
+    },
+    {
+      "id": "schedule:bc36b22de1e9a91a@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "bc36b22de1e9a91a@msu-schedule",
+      "scheduledStartsAt": "2026-09-22T10:45:00+03:00",
+      "startedAt": "2026-09-22T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Информатика",
+      "courseType": "Пз",
+      "title": "Информатика",
+      "instructor": "Петров Павел Андреевич",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-09-22T09:15:40.915Z"
     }
   ]
 }
