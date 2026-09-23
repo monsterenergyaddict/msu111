@@ -500,12 +500,13 @@
       "courseType": "Лк",
       "title": "Русский язык и культура речи — 16.09",
       "instructor": "Арутюнова Марина Араиковна",
-      "status": "processing",
+      "status": "ready",
       "summary": "",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-21T12:18:23+03:00",
-      "plaudFileId": "eaf3d0f5c968809afb6d291b09ed63cb"
+      "updatedAt": "2026-09-23T07:05:26.363Z",
+      "plaudFileId": "eaf3d0f5c968809afb6d291b09ed63cb",
+      "shareUrl": "https://web.plaud.ai/s/pub_ef65af47-19cc-4a78-830b-c724f696bf28::Zo1gpmHqdise3jlXSvbHivhsgEDFLL1GWJoaaTGTX7F31LGMSQWJy-gfP9TRkY72ryVY2Obr2hTemkUC"
     },
     {
       "id": "plaud:ddf3ae53f0d2ed96925c90e059691cda",
@@ -518,12 +519,13 @@
       "courseType": "Лк",
       "title": "История мировой философии — 1-я пара",
       "instructor": "Костикова Анна Анатольевна",
-      "status": "processing",
+      "status": "ready",
       "summary": "",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-21T12:18:23+03:00",
-      "plaudFileId": "ddf3ae53f0d2ed96925c90e059691cda"
+      "updatedAt": "2026-09-23T07:05:26.363Z",
+      "plaudFileId": "ddf3ae53f0d2ed96925c90e059691cda",
+      "shareUrl": "https://web.plaud.ai/s/pub_4e81151e-f492-4295-b411-a8c1bba6afea::k5-uO_LCcp0XKSh1M3-vJpCita-fylR-8pBGAyxk3TdzR20I_vCAEP3bmmykAmRJRZOJvDrXwnS9_KwC"
     },
     {
       "id": "plaud:95c32d9daa2c72f066d21766179ba740",
@@ -576,7 +578,7 @@
       "summary": "",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-23T06:59:53.455Z",
+      "updatedAt": "2026-09-23T07:05:26.363Z",
       "plaudFileId": "359b8ebd5f79df6610b7c00a073f904b",
       "shareUrl": "https://web.plaud.ai/s/pub_2b6d6493-de75-4b8c-ad6a-fe89c44c13a0::5MrGncCGulRducrF_h4pnIa8A-q0RJVEJqCEI7X9Yu8TI9A1XKKOhevBUl_acOPId3E_wuGvtaIbv9gC"
     },
@@ -591,11 +593,12 @@
       "courseType": "Лк",
       "title": "двОсновы работы с информацией",
       "instructor": "Костикова Анна Анатольевна",
-      "status": "processing",
+      "status": "ready",
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 4,
-      "updatedAt": "2026-09-18T13:30:12.796Z"
+      "updatedAt": "2026-09-23T07:05:26.363Z",
+      "shareUrl": "https://web.plaud.ai/s/pub_1f414141-2fad-429b-828e-e811ca408c1d::pe3LL4nVHAKHEqdyhfNNkxSDBnBOlMQsxTERpHa1EgoSK8C7tDxaIs94opAIGYFd3G6hDDTnMa_V-5sC"
     },
     {
       "id": "schedule:31764b6b054f4570@msu-schedule",
@@ -629,7 +632,7 @@
       "summary": "",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-23T06:59:53.455Z",
+      "updatedAt": "2026-09-23T07:05:26.363Z",
       "plaudFileId": "0cf41b6c96d9cfce8ea35fe6db4bb3e2",
       "shareUrl": "https://web.plaud.ai/s/pub_603e3353-a70b-41bf-bb9e-12efeb49d7f3::tnjqIdFgYW-AJjrsA7TAcxFzyMnrrtzaX5I9ZoVWeTad4amsaT5zNHe1q_6ChUWAeXjSFUm4DU3NrkIC"
     },
@@ -648,7 +651,7 @@
       "summary": "",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-23T06:59:53.455Z",
+      "updatedAt": "2026-09-23T07:05:26.363Z",
       "plaudFileId": "e05849eaad967dff0f3a0dc04c55b45d",
       "shareUrl": "https://web.plaud.ai/s/pub_90d2a340-f92d-4f7e-8c23-3829da2da496::tiIRDHxJ5UUHJG9HtYNyJczxRKhETJalywSmMjgxHbBZBs4vWTb27fHpDi7NW8T-H7lxZBQwvGkx7ioC"
     },
@@ -663,12 +666,13 @@
       "courseType": "Лк",
       "title": "История России",
       "instructor": "Ткаченко Виктория Владимировна",
-      "status": "processing",
+      "status": "ready",
       "summary": "",
       "topics": [],
       "lessonNumber": 4,
-      "updatedAt": "2026-09-21T13:57:13+03:00",
-      "plaudFileId": "6ffd35c53c9675a90566a618e856c97e"
+      "updatedAt": "2026-09-23T07:05:26.363Z",
+      "plaudFileId": "6ffd35c53c9675a90566a618e856c97e",
+      "shareUrl": "https://web.plaud.ai/s/pub_22b91aac-bd01-4ae3-8a5d-d56f51a520cd::UXw4vq8TI0vhkClSPCXWI1NxXZXwJUEdTftNC3NR8JCnohjFCS61dhagFUHXO9yrXVHfnTMLSFvxaXgC"
     },
     {
       "id": "plaud:46f4c552a12663d24f1b458bb4531136",
