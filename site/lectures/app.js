@@ -301,19 +301,23 @@ function bindControls() {
 
 async function start() {
   try {
-    const [catalogResponse, scheduleResponse] = await Promise.all([
-      fetch("data.json", { cache: "no-store" }),
-      fetch("../111.ics", { cache: "no-store" })
-    ]);
-    if (!catalogResponse.ok || !scheduleResponse.ok) throw new Error("Source unavailable");
-    const [data, ics] = await Promise.all([catalogResponse.json(), scheduleResponse.text()]);
+    const catalogResponse = await fetch("data.json", { cache: "no-store" });
+    if (!catalogResponse.ok) throw new Error("Catalog unavailable");
+    const data = await catalogResponse.json();
     state.records = Array.isArray(data.records) ? data.records.map(normalize) : [];
     state.recordsByUid = new Map(state.records.filter((record) => record.scheduleUid).map((record) => [record.scheduleUid, record]));
-    const today = dateKey(new Date());
-    const allSchedule = parseSchedule(ics);
-    const visibleDates = [...new Set(allSchedule.map((event) => event.date).filter((date) => date >= today))]
-      .sort().slice(0, LOOKAHEAD_STUDY_DAYS + 1);
-    state.schedule = allSchedule.filter((event) => visibleDates.includes(event.date));
+    state.schedule = [];
+    try {
+      const scheduleResponse = await fetch("../111.ics", { cache: "no-store" });
+      if (!scheduleResponse.ok) throw new Error("Schedule unavailable");
+      const allSchedule = parseSchedule(await scheduleResponse.text());
+      const today = dateKey(new Date());
+      const visibleDates = [...new Set(allSchedule.map((event) => event.date).filter((date) => date >= today))]
+        .sort().slice(0, LOOKAHEAD_STUDY_DAYS + 1);
+      state.schedule = allSchedule.filter((event) => visibleDates.includes(event.date));
+    } catch (error) {
+      console.warn("Schedule unavailable", error);
+    }
     const updated = data.updatedAt ? new Intl.DateTimeFormat("ru-RU", {
       timeZone: TIME_ZONE, dateStyle: "medium", timeStyle: "short"
     }).format(new Date(data.updatedAt)) : "";
@@ -322,7 +326,7 @@ async function start() {
     bindControls();
     render();
   } catch (_) {
-    $("#catalog-count").textContent = "Расписание временно недоступно";
+    $("#catalog-count").textContent = "Каталог временно недоступен";
     $("#load-error").hidden = false;
   }
 }
