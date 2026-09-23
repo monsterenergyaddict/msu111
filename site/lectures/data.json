@@ -572,12 +572,13 @@
       "courseType": "Сем",
       "title": "Логическая форма и оценка рассуждений",
       "instructor": "Григорьев Олег Михайлович",
-      "status": "processing",
+      "status": "ready",
       "summary": "",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-21T12:18:23+03:00",
-      "plaudFileId": "359b8ebd5f79df6610b7c00a073f904b"
+      "updatedAt": "2026-09-23T06:59:53.455Z",
+      "plaudFileId": "359b8ebd5f79df6610b7c00a073f904b",
+      "shareUrl": "https://web.plaud.ai/s/pub_2b6d6493-de75-4b8c-ad6a-fe89c44c13a0::5MrGncCGulRducrF_h4pnIa8A-q0RJVEJqCEI7X9Yu8TI9A1XKKOhevBUl_acOPId3E_wuGvtaIbv9gC"
     },
     {
       "id": "schedule:6b2353b216583db1@msu-schedule",
@@ -624,12 +625,13 @@
       "courseType": "Сем",
       "title": "Введение в курс безопасности жизнедеятельности",
       "instructor": "",
-      "status": "processing",
+      "status": "ready",
       "summary": "",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-21T12:18:23+03:00",
-      "plaudFileId": "0cf41b6c96d9cfce8ea35fe6db4bb3e2"
+      "updatedAt": "2026-09-23T06:59:53.455Z",
+      "plaudFileId": "0cf41b6c96d9cfce8ea35fe6db4bb3e2",
+      "shareUrl": "https://web.plaud.ai/s/pub_603e3353-a70b-41bf-bb9e-12efeb49d7f3::tnjqIdFgYW-AJjrsA7TAcxFzyMnrrtzaX5I9ZoVWeTad4amsaT5zNHe1q_6ChUWAeXjSFUm4DU3NrkIC"
     },
     {
       "id": "plaud:e05849eaad967dff0f3a0dc04c55b45d",
@@ -642,12 +644,13 @@
       "courseType": "Сем",
       "title": "Культура речи, языкознание и орфоэпия",
       "instructor": "Арутюнова Марина Араиковна",
-      "status": "processing",
+      "status": "ready",
       "summary": "",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-21T12:18:23+03:00",
-      "plaudFileId": "e05849eaad967dff0f3a0dc04c55b45d"
+      "updatedAt": "2026-09-23T06:59:53.455Z",
+      "plaudFileId": "e05849eaad967dff0f3a0dc04c55b45d",
+      "shareUrl": "https://web.plaud.ai/s/pub_90d2a340-f92d-4f7e-8c23-3829da2da496::tiIRDHxJ5UUHJG9HtYNyJczxRKhETJalywSmMjgxHbBZBs4vWTb27fHpDi7NW8T-H7lxZBQwvGkx7ioC"
     },
     {
       "id": "plaud:6ffd35c53c9675a90566a618e856c97e",
