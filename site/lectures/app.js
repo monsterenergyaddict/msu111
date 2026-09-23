@@ -310,7 +310,8 @@ async function start() {
     try {
       const scheduleResponse = await fetch("../111.ics", { cache: "no-store" });
       if (!scheduleResponse.ok) throw new Error("Schedule unavailable");
-      const allSchedule = parseSchedule(await scheduleResponse.text());
+      const hiddenCourses = new Set(["Английский язык", "Немецкий язык", "Французский язык", "Физическая культура", "Межфакультетский учебный курс"]);
+      const allSchedule = parseSchedule(await scheduleResponse.text()).filter((event) => !hiddenCourses.has(String(event.course || "").trim()));
       const today = dateKey(new Date());
       const visibleDates = [...new Set(allSchedule.map((event) => event.date).filter((date) => date >= today))]
         .sort().slice(0, LOOKAHEAD_STUDY_DAYS + 1);
