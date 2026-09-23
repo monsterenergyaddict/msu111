@@ -186,9 +186,9 @@ function card(record, event = null) {
     label: record.status === "cancelled" ? "Пара отменена" : (record.status === "ready" ? "Конспект готов" : "Конспект готовится"),
     message: record.status === "cancelled" ? (record.summary || "По расписанию пара отменена.") : (record.status === "ready" ? "" : "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически.")
   };
-  const title = record?.title || event.title;
-  const course = record?.course || event.course;
-  const courseType = record?.courseType || event.courseType;
+  const title = record?.title || event?.title || "Запись без названия";
+  const course = record?.course || event?.course || "Без предмета";
+  const courseType = record?.courseType || event?.courseType || "";
   const instructorValue = event?.instructor || record?.instructor || "";
   const pair = event?.lessonNumber || record?.lessonNumber;
   const meta = event
