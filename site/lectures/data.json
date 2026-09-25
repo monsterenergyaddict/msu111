@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-25T13:30:02.979Z",
+  "updatedAt": "2026-09-25T15:15:02.458Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1017,7 +1017,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 4,
-      "updatedAt": "2026-09-25T13:30:02.979Z"
+      "updatedAt": "2026-09-25T13:30:02.979Z",
+      "recordingKey": "record:schedule:f96785927e74a545@msu-schedule"
+    },
+    {
+      "id": "schedule:8d169f7759b5a4b0@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "8d169f7759b5a4b0@msu-schedule",
+      "scheduledStartsAt": "2026-09-25T16:45:00+03:00",
+      "startedAt": "2026-09-25T16:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Введение в коммуникационные специальности",
+      "courseType": "Лк",
+      "title": "Введение в коммуникационные специальности",
+      "instructor": "Прокудина Елена Константиновна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 5,
+      "updatedAt": "2026-09-25T15:15:02.458Z"
     }
   ]
 }
