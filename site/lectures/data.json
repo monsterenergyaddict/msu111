@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-22T09:36:19+03:00",
+  "updatedAt": "2026-09-25T12:45:22.151Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -25,7 +25,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 1,
       "instructor": "Козырев Алексей Павлович",
-      "shareUrl": "https://web.plaud.ai/s/pub_5b766dbc-b161-4460-b366-2837dbc7043f::My6OaUFGvhXONyflHFb4GrY3ro2XwpYMmQfhTpSTxxWQWrnLLAUG5ok9Zw9N7Tp2VbEAKXbnhj93dcAC"
+      "shareUrl": "https://web.plaud.ai/s/pub_5b766dbc-b161-4460-b366-2837dbc7043f::My6OaUFGvhXONyflHFb4GrY3ro2XwpYMmQfhTpSTxxWQWrnLLAUG5ok9Zw9N7Tp2VbEAKXbnhj93dcAC",
+      "recordingKey": "plaud:c9d3eac95b31b7878de5a0041cee1107"
     },
     {
       "id": "plaud:13addd22afe745fc03da277ea3e6e58d",
@@ -49,7 +50,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 2,
       "instructor": "Костикова Анна Анатольевна",
-      "shareUrl": "https://web.plaud.ai/s/pub_54b1b95c-2a7e-454c-acc8-53a1239ae350::WZTdzM7-cIATwSh9ybMPEHUZIDbusoXBvI6Aace5FvWkid0zRa2IwESHZ4_CR7ADCfo9554TQ8rhc0MC"
+      "shareUrl": "https://web.plaud.ai/s/pub_54b1b95c-2a7e-454c-acc8-53a1239ae350::WZTdzM7-cIATwSh9ybMPEHUZIDbusoXBvI6Aace5FvWkid0zRa2IwESHZ4_CR7ADCfo9554TQ8rhc0MC",
+      "recordingKey": "plaud:13addd22afe745fc03da277ea3e6e58d"
     },
     {
       "id": "plaud:66b5877bfbed1cd4f855c631d2ea9f81",
@@ -73,7 +75,8 @@
       "shareUrl": "https://web.plaud.ai/s/pub_61e6f148-48c5-49cd-a6a1-7f584219484a::ejCDqr0dBb-7qRxdUkBkaid6LbnzPAJIH4UW6AEoLJW7hvO0d1N3WBDyf02SyWEkFmGPpo9GvajD4rkC",
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 1,
-      "instructor": "Костикова Анна Анатольевна"
+      "instructor": "Костикова Анна Анатольевна",
+      "recordingKey": "plaud:66b5877bfbed1cd4f855c631d2ea9f81"
     },
     {
       "id": "plaud:13be20d886c84f503e46fdf9b84467cb",
@@ -97,7 +100,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 2,
       "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна",
-      "shareUrl": "https://web.plaud.ai/s/pub_3a5098b9-110b-4911-9793-707575c29e9d::eUd6wg93KTXhqjAxHfy2S6_B-UE6XEC5TcKPgQXPMWGNph8q296sItLJck3jNvf_jh356Mh96oMOwSEC"
+      "shareUrl": "https://web.plaud.ai/s/pub_3a5098b9-110b-4911-9793-707575c29e9d::eUd6wg93KTXhqjAxHfy2S6_B-UE6XEC5TcKPgQXPMWGNph8q296sItLJck3jNvf_jh356Mh96oMOwSEC",
+      "recordingKey": "plaud:13be20d886c84f503e46fdf9b84467cb"
     },
     {
       "id": "plaud:752b04ee9b216ad3cc7c6b144bd74368",
@@ -121,7 +125,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 3,
       "instructor": "Крупник Игорь Леонидович, Карпухина Светлана Павловна",
-      "shareUrl": "https://web.plaud.ai/s/pub_0c917cd9-aaac-4aec-bac4-8e7a20ba722d::Db8YYbr0RQDdCeP8-oOHwv4syZY_a-RzKDyoa_QIwFJtlF5not7KI6KskVi400kuiZjaQ9GOv36Yh_UC"
+      "shareUrl": "https://web.plaud.ai/s/pub_0c917cd9-aaac-4aec-bac4-8e7a20ba722d::Db8YYbr0RQDdCeP8-oOHwv4syZY_a-RzKDyoa_QIwFJtlF5not7KI6KskVi400kuiZjaQ9GOv36Yh_UC",
+      "recordingKey": "plaud:752b04ee9b216ad3cc7c6b144bd74368"
     },
     {
       "id": "plaud:c7170110c5ac03c94de2081beae3ce45",
@@ -145,7 +150,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 1,
       "instructor": "Ильин Алексей Алексеевич",
-      "shareUrl": "https://web.plaud.ai/s/pub_daff1da9-70ff-426f-8b5d-1e9cced64684::gEDU-L7NEJiqan5upTq-F-6TllLcgRvxMJvadIRMa_6kUv-_UdidIMqwA_1Ko_x_dTTZpwzrOETL7HAC"
+      "shareUrl": "https://web.plaud.ai/s/pub_daff1da9-70ff-426f-8b5d-1e9cced64684::gEDU-L7NEJiqan5upTq-F-6TllLcgRvxMJvadIRMa_6kUv-_UdidIMqwA_1Ko_x_dTTZpwzrOETL7HAC",
+      "recordingKey": "plaud:c7170110c5ac03c94de2081beae3ce45"
     },
     {
       "id": "plaud:cbfa98f6fe28df3e107ab7849a653cce",
@@ -169,7 +175,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 2,
       "instructor": "Ильин Алексей Алексеевич",
-      "shareUrl": "https://web.plaud.ai/s/pub_3a393038-cbcd-4d8c-862c-54285582b7fb::dF7Tp7ZgufAlp_4tgYoHjc8X8mMI3qhLMO5Jkztpr0LNUzYJaNegQBjiNLMANoEK8KyCWWIMPFHfEvQC"
+      "shareUrl": "https://web.plaud.ai/s/pub_3a393038-cbcd-4d8c-862c-54285582b7fb::dF7Tp7ZgufAlp_4tgYoHjc8X8mMI3qhLMO5Jkztpr0LNUzYJaNegQBjiNLMANoEK8KyCWWIMPFHfEvQC",
+      "recordingKey": "plaud:cbfa98f6fe28df3e107ab7849a653cce"
     },
     {
       "id": "plaud:46a6297e94c6e7b2289e29b21d4ca40b:244019a2b2a19725",
@@ -193,7 +200,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 3,
       "instructor": "Костикова Анна Анатольевна",
-      "shareUrl": "https://web.plaud.ai/s/pub_eb65bbd8-9dba-4c0c-bcf6-b746ad23cee9::YiPe2adp0LuGkr2CfYF0vCAGKSKLIgKRepeUMUTCH8lUZIbPGuovTO8kIXY905k59rVHLEt4aWMPDisC"
+      "shareUrl": "https://web.plaud.ai/s/pub_eb65bbd8-9dba-4c0c-bcf6-b746ad23cee9::YiPe2adp0LuGkr2CfYF0vCAGKSKLIgKRepeUMUTCH8lUZIbPGuovTO8kIXY905k59rVHLEt4aWMPDisC",
+      "recordingKey": "plaud:46a6297e94c6e7b2289e29b21d4ca40b"
     },
     {
       "id": "plaud:46a6297e94c6e7b2289e29b21d4ca40b:5b97ee2f94755424",
@@ -217,7 +225,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 4,
       "instructor": "Костикова Анна Анатольевна",
-      "shareUrl": "https://web.plaud.ai/s/pub_eb65bbd8-9dba-4c0c-bcf6-b746ad23cee9::YiPe2adp0LuGkr2CfYF0vCAGKSKLIgKRepeUMUTCH8lUZIbPGuovTO8kIXY905k59rVHLEt4aWMPDisC"
+      "shareUrl": "https://web.plaud.ai/s/pub_eb65bbd8-9dba-4c0c-bcf6-b746ad23cee9::YiPe2adp0LuGkr2CfYF0vCAGKSKLIgKRepeUMUTCH8lUZIbPGuovTO8kIXY905k59rVHLEt4aWMPDisC",
+      "recordingKey": "plaud:46a6297e94c6e7b2289e29b21d4ca40b"
     },
     {
       "id": "plaud:f2441517954834387a0d5ebca0e2412e",
@@ -241,7 +250,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 2,
       "instructor": "Ткаченко Виктория Владимировна",
-      "shareUrl": "https://web.plaud.ai/s/pub_b64bfe11-eaa7-44fb-99ec-f8379d4ecea8::kpuB7u-K2xnGxhKZk8CJaec_cztqrE49OjfMjSqZjywe4SRHb2qcn3K5hyAsEPQJxXsmrefnjns8uKcC"
+      "shareUrl": "https://web.plaud.ai/s/pub_b64bfe11-eaa7-44fb-99ec-f8379d4ecea8::kpuB7u-K2xnGxhKZk8CJaec_cztqrE49OjfMjSqZjywe4SRHb2qcn3K5hyAsEPQJxXsmrefnjns8uKcC",
+      "recordingKey": "plaud:f2441517954834387a0d5ebca0e2412e"
     },
     {
       "id": "plaud:362baa4a8c062ad6affadab5db30eba7",
@@ -265,7 +275,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 1,
       "instructor": "Нестерова Ксения Александровна",
-      "shareUrl": "https://web.plaud.ai/s/pub_d04086b9-41b0-4b78-ad64-2d3f192d4e52::61M4cAu8_06yC2XOwIJLsNe58689KnbMbDkXhoEsDI9sEyi_tTofo1ycwFJ_hBOJ6I3-7q8iQ8U2GAUC"
+      "shareUrl": "https://web.plaud.ai/s/pub_d04086b9-41b0-4b78-ad64-2d3f192d4e52::61M4cAu8_06yC2XOwIJLsNe58689KnbMbDkXhoEsDI9sEyi_tTofo1ycwFJ_hBOJ6I3-7q8iQ8U2GAUC",
+      "recordingKey": "plaud:362baa4a8c062ad6affadab5db30eba7"
     },
     {
       "id": "plaud:8a15da31324066d7b78805eee00471b8",
@@ -289,7 +300,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 2,
       "instructor": "Петров Павел Андреевич",
-      "shareUrl": "https://web.plaud.ai/s/pub_009717c6-606c-4107-90a1-e4d716e7e642::iH2klzKoez4lIsZq26F2y0lZMc1gBj0CdtsSHoazdfBCzPA6A9UJvcYDkCult3R7N4O0v_RTuSN6xEEC"
+      "shareUrl": "https://web.plaud.ai/s/pub_009717c6-606c-4107-90a1-e4d716e7e642::iH2klzKoez4lIsZq26F2y0lZMc1gBj0CdtsSHoazdfBCzPA6A9UJvcYDkCult3R7N4O0v_RTuSN6xEEC",
+      "recordingKey": "plaud:8a15da31324066d7b78805eee00471b8"
     },
     {
       "id": "plaud:26592781d4784697b5566ca4f43f7d52",
@@ -307,7 +319,8 @@
       "topics": [],
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 1,
-      "instructor": "Карпухина Светлана Павловна"
+      "instructor": "Карпухина Светлана Павловна",
+      "recordingKey": "plaud:26592781d4784697b5566ca4f43f7d52"
     },
     {
       "id": "plaud:a6d986ad0369eec0dcb98d6c35eda39a",
@@ -331,7 +344,8 @@
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "lessonNumber": 2,
       "instructor": "Арутюнова Марина Араиковна",
-      "shareUrl": "https://web.plaud.ai/s/pub_03c3ac67-8f8f-4442-8a9c-b7fd012f34f8::PpTsQ4lhdeFD2j5QXGYMb1aI87yFXP7WH-mIhPImrnrarP9yKxQolSiW0TH2vAPSTe9tGy--ugYxnlYC"
+      "shareUrl": "https://web.plaud.ai/s/pub_03c3ac67-8f8f-4442-8a9c-b7fd012f34f8::PpTsQ4lhdeFD2j5QXGYMb1aI87yFXP7WH-mIhPImrnrarP9yKxQolSiW0TH2vAPSTe9tGy--ugYxnlYC",
+      "recordingKey": "plaud:a6d986ad0369eec0dcb98d6c35eda39a"
     },
     {
       "id": "plaud:c43a6bb63acb6186f0c2f0e6f9fcac98",
@@ -350,7 +364,8 @@
       "lessonNumber": 1,
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "plaudFileId": "c43a6bb63acb6186f0c2f0e6f9fcac98",
-      "shareUrl": "https://web.plaud.ai/s/pub_6fac8fa8-dd7c-4f08-a252-5c5f90725f24::EDuuv8ihJnroIEyrUEGgE1YmKTDVxxmROGdmGt1UeD3bYuUa8b40DRhLabhtt2Nc6VLOdrF4m1hG1DIC"
+      "shareUrl": "https://web.plaud.ai/s/pub_6fac8fa8-dd7c-4f08-a252-5c5f90725f24::EDuuv8ihJnroIEyrUEGgE1YmKTDVxxmROGdmGt1UeD3bYuUa8b40DRhLabhtt2Nc6VLOdrF4m1hG1DIC",
+      "recordingKey": "plaud:c43a6bb63acb6186f0c2f0e6f9fcac98"
     },
     {
       "id": "plaud:754581a5d6ce12a2af8cfbffa8c92f0e",
@@ -368,7 +383,8 @@
       "topics": [],
       "lessonNumber": 2,
       "updatedAt": "2026-09-23T07:05:37.558Z",
-      "plaudFileId": "754581a5d6ce12a2af8cfbffa8c92f0e"
+      "plaudFileId": "754581a5d6ce12a2af8cfbffa8c92f0e",
+      "recordingKey": "plaud:754581a5d6ce12a2af8cfbffa8c92f0e"
     },
     {
       "id": "schedule:06f08b5b800c9aa6@msu-schedule",
@@ -385,7 +401,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:06f08b5b800c9aa6@msu-schedule"
     },
     {
       "id": "schedule:86d94c2286cc0100@msu-schedule",
@@ -402,7 +419,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:86d94c2286cc0100@msu-schedule"
     },
     {
       "id": "schedule:be7b6e524d16464d@msu-schedule",
@@ -419,7 +437,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 4,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:be7b6e524d16464d@msu-schedule"
     },
     {
       "id": "schedule:4e3078578489437c@msu-schedule",
@@ -436,7 +455,8 @@
       "summary": "Занятие добав��ено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 5,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:4e3078578489437c@msu-schedule"
     },
     {
       "id": "schedule:45f7e68bd8a9fa01@msu-schedule",
@@ -453,7 +473,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:45f7e68bd8a9fa01@msu-schedule"
     },
     {
       "id": "schedule:e1e97875d8e02216@msu-schedule",
@@ -470,7 +491,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:e1e97875d8e02216@msu-schedule"
     },
     {
       "id": "schedule:709196f3bd024be6@msu-schedule",
@@ -487,7 +509,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:709196f3bd024be6@msu-schedule"
     },
     {
       "id": "plaud:eaf3d0f5c968809afb6d291b09ed63cb",
@@ -506,7 +529,8 @@
       "lessonNumber": 2,
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "plaudFileId": "eaf3d0f5c968809afb6d291b09ed63cb",
-      "shareUrl": "https://web.plaud.ai/s/pub_ef65af47-19cc-4a78-830b-c724f696bf28::Zo1gpmHqdise3jlXSvbHivhsgEDFLL1GWJoaaTGTX7F31LGMSQWJy-gfP9TRkY72ryVY2Obr2hTemkUC"
+      "shareUrl": "https://web.plaud.ai/s/pub_ef65af47-19cc-4a78-830b-c724f696bf28::Zo1gpmHqdise3jlXSvbHivhsgEDFLL1GWJoaaTGTX7F31LGMSQWJy-gfP9TRkY72ryVY2Obr2hTemkUC",
+      "recordingKey": "plaud:eaf3d0f5c968809afb6d291b09ed63cb"
     },
     {
       "id": "plaud:ddf3ae53f0d2ed96925c90e059691cda",
@@ -525,7 +549,8 @@
       "lessonNumber": 1,
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "plaudFileId": "ddf3ae53f0d2ed96925c90e059691cda",
-      "shareUrl": "https://web.plaud.ai/s/pub_4e81151e-f492-4295-b411-a8c1bba6afea::k5-uO_LCcp0XKSh1M3-vJpCita-fylR-8pBGAyxk3TdzR20I_vCAEP3bmmykAmRJRZOJvDrXwnS9_KwC"
+      "shareUrl": "https://web.plaud.ai/s/pub_4e81151e-f492-4295-b411-a8c1bba6afea::k5-uO_LCcp0XKSh1M3-vJpCita-fylR-8pBGAyxk3TdzR20I_vCAEP3bmmykAmRJRZOJvDrXwnS9_KwC",
+      "recordingKey": "plaud:ddf3ae53f0d2ed96925c90e059691cda"
     },
     {
       "id": "plaud:95c32d9daa2c72f066d21766179ba740",
@@ -543,7 +568,8 @@
       "topics": [],
       "lessonNumber": 2,
       "updatedAt": "2026-09-23T07:05:37.558Z",
-      "plaudFileId": "95c32d9daa2c72f066d21766179ba740"
+      "plaudFileId": "95c32d9daa2c72f066d21766179ba740",
+      "recordingKey": "plaud:95c32d9daa2c72f066d21766179ba740"
     },
     {
       "id": "plaud:d76da84e174e6bf400cb661423567882",
@@ -561,7 +587,8 @@
       "topics": [],
       "lessonNumber": 1,
       "updatedAt": "2026-09-23T07:05:37.558Z",
-      "plaudFileId": "d76da84e174e6bf400cb661423567882"
+      "plaudFileId": "d76da84e174e6bf400cb661423567882",
+      "recordingKey": "plaud:d76da84e174e6bf400cb661423567882"
     },
     {
       "id": "plaud:359b8ebd5f79df6610b7c00a073f904b",
@@ -580,7 +607,8 @@
       "lessonNumber": 2,
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "plaudFileId": "359b8ebd5f79df6610b7c00a073f904b",
-      "shareUrl": "https://web.plaud.ai/s/pub_2b6d6493-de75-4b8c-ad6a-fe89c44c13a0::5MrGncCGulRducrF_h4pnIa8A-q0RJVEJqCEI7X9Yu8TI9A1XKKOhevBUl_acOPId3E_wuGvtaIbv9gC"
+      "shareUrl": "https://web.plaud.ai/s/pub_2b6d6493-de75-4b8c-ad6a-fe89c44c13a0::5MrGncCGulRducrF_h4pnIa8A-q0RJVEJqCEI7X9Yu8TI9A1XKKOhevBUl_acOPId3E_wuGvtaIbv9gC",
+      "recordingKey": "plaud:359b8ebd5f79df6610b7c00a073f904b"
     },
     {
       "id": "schedule:6b2353b216583db1@msu-schedule",
@@ -598,7 +626,8 @@
       "topics": [],
       "lessonNumber": 4,
       "updatedAt": "2026-09-23T07:05:37.558Z",
-      "shareUrl": "https://web.plaud.ai/s/pub_1f414141-2fad-429b-828e-e811ca408c1d::pe3LL4nVHAKHEqdyhfNNkxSDBnBOlMQsxTERpHa1EgoSK8C7tDxaIs94opAIGYFd3G6hDDTnMa_V-5sC"
+      "shareUrl": "https://web.plaud.ai/s/pub_1f414141-2fad-429b-828e-e811ca408c1d::pe3LL4nVHAKHEqdyhfNNkxSDBnBOlMQsxTERpHa1EgoSK8C7tDxaIs94opAIGYFd3G6hDDTnMa_V-5sC",
+      "recordingKey": "share:https://web.plaud.ai/s/pub_1f414141-2fad-429b-828e-e811ca408c1d::pe3LL4nVHAKHEqdyhfNNkxSDBnBOlMQsxTERpHa1EgoSK8C7tDxaIs94opAIGYFd3G6hDDTnMa_V-5sC"
     },
     {
       "id": "schedule:31764b6b054f4570@msu-schedule",
@@ -615,7 +644,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 5,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:31764b6b054f4570@msu-schedule"
     },
     {
       "id": "plaud:0cf41b6c96d9cfce8ea35fe6db4bb3e2",
@@ -634,7 +664,8 @@
       "lessonNumber": 1,
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "plaudFileId": "0cf41b6c96d9cfce8ea35fe6db4bb3e2",
-      "shareUrl": "https://web.plaud.ai/s/pub_603e3353-a70b-41bf-bb9e-12efeb49d7f3::tnjqIdFgYW-AJjrsA7TAcxFzyMnrrtzaX5I9ZoVWeTad4amsaT5zNHe1q_6ChUWAeXjSFUm4DU3NrkIC"
+      "shareUrl": "https://web.plaud.ai/s/pub_603e3353-a70b-41bf-bb9e-12efeb49d7f3::tnjqIdFgYW-AJjrsA7TAcxFzyMnrrtzaX5I9ZoVWeTad4amsaT5zNHe1q_6ChUWAeXjSFUm4DU3NrkIC",
+      "recordingKey": "plaud:0cf41b6c96d9cfce8ea35fe6db4bb3e2"
     },
     {
       "id": "plaud:e05849eaad967dff0f3a0dc04c55b45d",
@@ -653,7 +684,8 @@
       "lessonNumber": 2,
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "plaudFileId": "e05849eaad967dff0f3a0dc04c55b45d",
-      "shareUrl": "https://web.plaud.ai/s/pub_90d2a340-f92d-4f7e-8c23-3829da2da496::tiIRDHxJ5UUHJG9HtYNyJczxRKhETJalywSmMjgxHbBZBs4vWTb27fHpDi7NW8T-H7lxZBQwvGkx7ioC"
+      "shareUrl": "https://web.plaud.ai/s/pub_90d2a340-f92d-4f7e-8c23-3829da2da496::tiIRDHxJ5UUHJG9HtYNyJczxRKhETJalywSmMjgxHbBZBs4vWTb27fHpDi7NW8T-H7lxZBQwvGkx7ioC",
+      "recordingKey": "plaud:e05849eaad967dff0f3a0dc04c55b45d"
     },
     {
       "id": "plaud:6ffd35c53c9675a90566a618e856c97e",
@@ -672,7 +704,8 @@
       "lessonNumber": 4,
       "updatedAt": "2026-09-23T07:05:37.558Z",
       "plaudFileId": "6ffd35c53c9675a90566a618e856c97e",
-      "shareUrl": "https://web.plaud.ai/s/pub_22b91aac-bd01-4ae3-8a5d-d56f51a520cd::UXw4vq8TI0vhkClSPCXWI1NxXZXwJUEdTftNC3NR8JCnohjFCS61dhagFUHXO9yrXVHfnTMLSFvxaXgC"
+      "shareUrl": "https://web.plaud.ai/s/pub_22b91aac-bd01-4ae3-8a5d-d56f51a520cd::UXw4vq8TI0vhkClSPCXWI1NxXZXwJUEdTftNC3NR8JCnohjFCS61dhagFUHXO9yrXVHfnTMLSFvxaXgC",
+      "recordingKey": "plaud:6ffd35c53c9675a90566a618e856c97e"
     },
     {
       "id": "plaud:46f4c552a12663d24f1b458bb4531136",
@@ -690,7 +723,8 @@
       "topics": [],
       "lessonNumber": 1,
       "updatedAt": "2026-09-23T07:05:37.558Z",
-      "plaudFileId": "46f4c552a12663d24f1b458bb4531136"
+      "plaudFileId": "46f4c552a12663d24f1b458bb4531136",
+      "recordingKey": "plaud:46f4c552a12663d24f1b458bb4531136"
     },
     {
       "id": "schedule:bc36b22de1e9a91a@msu-schedule",
@@ -707,7 +741,8 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-09-23T07:05:37.558Z"
+      "updatedAt": "2026-09-23T07:05:37.558Z",
+      "recordingKey": "record:schedule:bc36b22de1e9a91a@msu-schedule"
     },
     {
       "id": "schedule-3be4b4cc183835b1-msu-schedule-1788939900000",
@@ -721,7 +756,11 @@
       "scheduleUid": "3be4b4cc183835b1@msu-schedule",
       "scheduleDate": "2026-09-09",
       "updatedAt": "2026-09-23T07:05:37.558Z",
-      "plaudFileId": "of_a6d986ad0369eec0dcb98d6c35eda39a"
+      "plaudFileId": "of_a6d986ad0369eec0dcb98d6c35eda39a",
+      "durationSeconds": 5400,
+      "scheduledStartsAt": "2026-09-09T10:45:00+03:00",
+      "recordingKey": "plaud:a6d986ad0369eec0dcb98d6c35eda39a",
+      "supersededBy": "plaud:a6d986ad0369eec0dcb98d6c35eda39a"
     },
     {
       "id": "schedule-bbc80aef58e5bf4e-msu-schedule-1788933600000",
@@ -735,7 +774,11 @@
       "scheduleUid": "bbc80aef58e5bf4e@msu-schedule",
       "scheduleDate": "2026-09-09",
       "updatedAt": "2026-09-23T07:05:37.558Z",
-      "plaudFileId": "of_26592781d4784697b5566ca4f43f7d52"
+      "plaudFileId": "of_26592781d4784697b5566ca4f43f7d52",
+      "durationSeconds": 5400,
+      "scheduledStartsAt": "2026-09-09T09:00:00+03:00",
+      "recordingKey": "plaud:26592781d4784697b5566ca4f43f7d52",
+      "supersededBy": "plaud:26592781d4784697b5566ca4f43f7d52"
     }
   ]
 }
