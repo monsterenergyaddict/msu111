@@ -157,8 +157,24 @@ function normalize(record) {
     shareUrl: typeof record.shareUrl === "string" && /^https:\/\/web\.plaud\.ai\/s\/.+/.test(record.shareUrl) ? record.shareUrl : "",
     title: record.title || "Запись без названия",
     status: ["ready", "cancelled"].includes(record.status) ? record.status : "processing",
-    topics: Array.isArray(record.topics) ? record.topics.slice(0, 4).filter(Boolean) : []
+    topics: Array.isArray(record.topics) ? record.topics.slice(0, 4).filter(Boolean) : [],
+    supersededBy: typeof record.supersededBy === "string" ? record.supersededBy : "",
+    recordingKey: typeof record.recordingKey === "string" ? record.recordingKey : ""
   };
+}
+
+function recordPriority(record) {
+  return (record.shareUrl ? 100 : 0) + (record.status === "ready" ? 30 : 0) + (record.summary ? 10 : 0) + (Number(record.durationSeconds || 0) > 0 ? 5 : 0) + (!String(record.plaudFileId || "").startsWith("of_") ? 1 : 0);
+}
+
+function canonicalRecords(records) {
+  const selected = new Map();
+  records.filter((record) => !record.supersededBy).forEach((record) => {
+    const key = record.scheduleUid || record.id;
+    const previous = selected.get(key);
+    if (!previous || recordPriority(record) > recordPriority(previous)) selected.set(key, record);
+  });
+  return [...selected.values()];
 }
 
 function hasTextMatch(item) {
@@ -177,7 +193,8 @@ function schedulePhase(event, record) {
   if (record?.status === "cancelled") return { key: "cancelled", label: "Пара отменена", message: record.summary || "По расписанию пара отменена." };
   if (record?.status === "ready") return { key: "ready", label: "Конспект готов", message: "" };
   if (record) return { key: "processing", label: "Конспект готовится", message: "Plaud ещё обрабатывает запись. Краткое содержание появится автоматически." };
-  return { key: "missing", label: "Пара завершена", message: "Запись Plaud пока не найдена." };
+  if (now < end + 24 * 60 * 60 * 1000) return { key: "missing", label: "Пара завершена", message: "Запись Plaud пока ожидается." };
+  return { key: "missing", label: "Записи нет", message: "За сутки запись Plaud не появилась." };
 }
 
 function card(record, event = null) {
@@ -261,7 +278,7 @@ function render() {
   const filteredRecords = state.records.filter((record) => hasTextMatch({ ...record, date: dateKey(record.startedAt) }))
     .filter((record) => !scheduledUids.has(record.scheduleUid));
 
-  const recordingCount = new Set(state.records.map((record) => record.plaudFileId || record.id)).size;
+  const recordingCount = new Set(state.records.map((record) => record.recordingKey || record.plaudFileId || record.shareUrl || record.id)).size;
   $("#catalog-count").textContent = state.query || state.course || state.date
     ? `Найдено: ${filteredRecords.length} ${recordWord(filteredRecords.length)}`
     : `${recordingCount} ${recordWord(recordingCount)} · ${state.schedule.length} ${pairWord(state.schedule.length)} в ближайшие дни`;
@@ -300,35 +317,31 @@ function bindControls() {
 }
 
 async function start() {
-  try {
-    const catalogResponse = await fetch("data.json", { cache: "no-store" });
-    if (!catalogResponse.ok) throw new Error("Catalog unavailable");
-    const data = await catalogResponse.json();
-    state.records = Array.isArray(data.records) ? data.records.map(normalize) : [];
+  const [catalogResult, scheduleResult] = await Promise.allSettled([
+    fetch("data.json", { cache: "no-store" }).then(async (response) => { if (!response.ok) throw new Error("Catalog unavailable"); return response.json(); }),
+    fetch("../111.ics", { cache: "no-store" }).then(async (response) => { if (!response.ok) throw new Error("Schedule unavailable"); return response.text(); })
+  ]);
+  let data = null;
+  if (catalogResult.status === "fulfilled") {
+    data = catalogResult.value;
+    state.records = canonicalRecords(Array.isArray(data.records) ? data.records.map(normalize) : []);
     state.recordsByUid = new Map(state.records.filter((record) => record.scheduleUid).map((record) => [record.scheduleUid, record]));
-    state.schedule = [];
-    try {
-      const scheduleResponse = await fetch("../111.ics", { cache: "no-store" });
-      if (!scheduleResponse.ok) throw new Error("Schedule unavailable");
-      const hiddenCourses = new Set(["Английский язык", "Немецкий язык", "Французский язык", "Физическая культура", "Межфакультетский учебный курс"]);
-      const allSchedule = parseSchedule(await scheduleResponse.text()).filter((event) => !hiddenCourses.has(String(event.course || "").trim()));
-      const today = dateKey(new Date());
-      const visibleDates = [...new Set(allSchedule.map((event) => event.date).filter((date) => date >= today))]
-        .sort().slice(0, LOOKAHEAD_STUDY_DAYS + 1);
-      state.schedule = allSchedule.filter((event) => visibleDates.includes(event.date));
-    } catch (error) {
-      console.warn("Schedule unavailable", error);
-    }
-    const updated = data.updatedAt ? new Intl.DateTimeFormat("ru-RU", {
-      timeZone: TIME_ZONE, dateStyle: "medium", timeStyle: "short"
-    }).format(new Date(data.updatedAt)) : "";
+    const updated = data.updatedAt ? new Intl.DateTimeFormat("ru-RU", { timeZone: TIME_ZONE, dateStyle: "medium", timeStyle: "short" }).format(new Date(data.updatedAt)) : "";
     $("#catalog-updated").textContent = updated ? `записи обновлены ${updated}` : "";
-    renderFilters();
-    bindControls();
-    render();
-  } catch (_) {
-    $("#catalog-count").textContent = "Каталог временно недоступен";
+  } else {
+    state.records = []; state.recordsByUid = new Map(); console.warn("Catalog unavailable", catalogResult.reason);
+  }
+  if (scheduleResult.status === "fulfilled") {
+    const hiddenCourses = new Set(["Английский язык", "Немецкий язык", "Французский язык", "Физическая культура", "Межфакультетский учебный курс"]);
+    const allSchedule = parseSchedule(scheduleResult.value).filter((event) => !hiddenCourses.has(String(event.course || "").trim()));
+    const today = dateKey(new Date());
+    const visibleDates = [...new Set(allSchedule.map((event) => event.date).filter((date) => date >= today))].sort().slice(0, LOOKAHEAD_STUDY_DAYS + 1);
+    state.schedule = allSchedule.filter((event) => visibleDates.includes(event.date));
+  } else { state.schedule = []; console.warn("Schedule unavailable", scheduleResult.reason); }
+  renderFilters(); bindControls(); render();
+  if (catalogResult.status === "rejected" || scheduleResult.status === "rejected") {
     $("#load-error").hidden = false;
+    $("#load-error").textContent = catalogResult.status === "rejected" && scheduleResult.status === "rejected" ? "Не удалось загрузить расписание и каталог. Обнови страницу чуть позже." : catalogResult.status === "rejected" ? "Каталог временно недоступен — пары из расписания всё равно показаны." : "Расписание временно недоступно — показываем сохранённые записи.";
   }
 }
 
