@@ -2,6 +2,16 @@ const TIME_ZONE = "Europe/Moscow";
 const LOOKAHEAD_STUDY_DAYS = 2;
 const $ = (selector) => document.querySelector(selector);
 
+async function fetchWithTimeout(url) {
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 8000);
+  try {
+    return await fetch(url, { cache: "no-store", signal: controller.signal });
+  } finally {
+    window.clearTimeout(timeout);
+  }
+}
+
 const state = { records: [], schedule: [], query: "", course: "", date: "" };
 
 function recordWord(count) {
@@ -318,8 +328,8 @@ function bindControls() {
 
 async function start() {
   const [catalogResult, scheduleResult] = await Promise.allSettled([
-    fetch("data.json", { cache: "no-store" }).then(async (response) => { if (!response.ok) throw new Error("Catalog unavailable"); return response.json(); }),
-    fetch("../111.ics", { cache: "no-store" }).then(async (response) => { if (!response.ok) throw new Error("Schedule unavailable"); return response.text(); })
+    fetchWithTimeout("data.json").then(async (response) => { if (!response.ok) throw new Error("Catalog unavailable"); return response.json(); }),
+    fetchWithTimeout("../111.ics").then(async (response) => { if (!response.ok) throw new Error("Schedule unavailable"); return response.text(); })
   ]);
   let data = null;
   if (catalogResult.status === "fulfilled") {
