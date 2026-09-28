@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-09-28T07:30:29.544Z",
+  "updatedAt": "2026-09-28T09:15:31.423Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1053,7 +1053,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-09-28T07:30:29.544Z"
+      "updatedAt": "2026-09-28T07:30:29.544Z",
+      "recordingKey": "record:schedule:9a2479536d395d7d@msu-schedule"
+    },
+    {
+      "id": "schedule:b611ce7947562afa@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "b611ce7947562afa@msu-schedule",
+      "scheduledStartsAt": "2026-09-28T10:45:00+03:00",
+      "startedAt": "2026-09-28T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Русский язык и культура речи",
+      "courseType": "Сем",
+      "title": "Русский язык и культура речи",
+      "instructor": "Арутюнова Марина Араиковна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-09-28T09:15:31.423Z"
     }
   ]
 }
