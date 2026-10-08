@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-08T07:30:40.742Z",
+  "updatedAt": "2026-10-08T09:15:33.171Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1614,7 +1614,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-08T07:30:40.742Z"
+      "updatedAt": "2026-10-08T07:30:40.742Z",
+      "recordingKey": "record:schedule:69bc0e2c6df190df@msu-schedule"
+    },
+    {
+      "id": "schedule:0d7e9e2963c03f73@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "0d7e9e2963c03f73@msu-schedule",
+      "scheduledStartsAt": "2026-10-08T10:45:00+03:00",
+      "startedAt": "2026-10-08T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "История мировой литературы",
+      "courseType": "Лк",
+      "title": "История мировой литературы",
+      "instructor": "Седых Оксана Михайловна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-10-08T09:15:33.171Z"
     }
   ]
 }
