@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-08T11:00:35.118Z",
+  "updatedAt": "2026-10-09T07:30:42.274Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1650,7 +1650,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 3,
-      "updatedAt": "2026-10-08T11:00:35.118Z"
+      "updatedAt": "2026-10-08T11:00:35.118Z",
+      "recordingKey": "record:schedule:slot:2026-10-08T12:30:00+03:00"
+    },
+    {
+      "id": "schedule:374387636a7a5d76@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "374387636a7a5d76@msu-schedule",
+      "scheduledStartsAt": "2026-10-09T09:00:00+03:00",
+      "startedAt": "2026-10-09T09:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Логика",
+      "courseType": "Лк",
+      "title": "Логика",
+      "instructor": "Ильин Алексей Алексеевич",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 1,
+      "updatedAt": "2026-10-09T07:30:42.274Z"
     }
   ]
 }
