@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-13T09:15:35.537Z",
+  "updatedAt": "2026-10-14T07:30:32.224Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1848,7 +1848,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-13T09:15:35.537Z"
+      "updatedAt": "2026-10-13T09:15:35.537Z",
+      "recordingKey": "record:schedule:4bd7cb410a09aa66@msu-schedule"
+    },
+    {
+      "id": "schedule:be5450071adff506@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "be5450071adff506@msu-schedule",
+      "scheduledStartsAt": "2026-10-14T09:00:00+03:00",
+      "startedAt": "2026-10-14T09:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "История мировой литературы",
+      "courseType": "Сем",
+      "title": "История мировой литературы",
+      "instructor": "Карпухина Светлана Павловна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 1,
+      "updatedAt": "2026-10-14T07:30:32.224Z"
     }
   ]
 }
