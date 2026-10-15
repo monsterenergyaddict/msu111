@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-15T09:15:21.861Z",
+  "updatedAt": "2026-10-15T11:00:31.869Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1974,7 +1974,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-15T09:15:21.861Z"
+      "updatedAt": "2026-10-15T09:15:21.861Z",
+      "recordingKey": "record:schedule:92bee25e870d92b3@msu-schedule"
+    },
+    {
+      "id": "schedule:slot:2026-10-15T12:30:00+03:00",
+      "source": "schedule",
+      "scheduleUid": "slot:2026-10-15T12:30:00+03:00",
+      "scheduledStartsAt": "2026-10-15T12:30:00+03:00",
+      "startedAt": "2026-10-15T12:30:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Занятие по подгруппе",
+      "courseType": "Лб",
+      "title": "Английский язык, Немецкий язык, Французский язык — по подгруппе",
+      "instructor": "",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 3,
+      "updatedAt": "2026-10-15T11:00:31.869Z"
     }
   ]
 }
