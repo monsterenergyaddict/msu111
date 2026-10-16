@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:35:44.813Z",
+  "updatedAt": "2026-10-16T07:36:04.676Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1428,14 +1428,21 @@
       "durationSeconds": 5400,
       "course": "Русский язык и культура речи",
       "courseType": "Сем",
-      "title": "Русский язык и культура речи",
+      "title": "Семинар, документоведение и практикум по объявлениям",
       "instructor": "Арутюнова Марина Араиковна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ Занятие представляет собой комбинацию устного опроса студентов по курсу общего языкознания, разбора определений документоведческих понятий, а также практических заданий (новостной дайджест и составление/проверка деловых объявлений).  Это не единая классическая лекция, а последовательность разных видов учебной активности в рамках одного занятия (или нескольких смежных пар).  1.",
+      "topics": [
+        "образцовой",
+        "обработанной",
+        "севернорусские",
+        "южнорусские"
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-05T09:15:48.449Z",
-      "recordingKey": "record:schedule:cd947fa14961b122@msu-schedule"
+      "updatedAt": "2026-10-16T07:36:04.676Z",
+      "recordingKey": "record:schedule:cd947fa14961b122@msu-schedule",
+      "plaudFileId": "565177c6fde92855067eadf49e4781c9",
+      "shareUrl": "https://web.plaud.ai/s/pub_ed5b51ef-d052-40c8-9aea-b00c9d803e08::ZxLTO0AFl4JgG8nCALm_nLll_qmz3wRm0Mm0G1MtvgH7ViJanEZWbXKOEq22Z22dQXJeAE5Yep5QnVkC"
     },
     {
       "id": "schedule:slot:2026-10-05T12:30:00+03:00",
