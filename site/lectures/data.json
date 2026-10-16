@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:32:35.977Z",
+  "updatedAt": "2026-10-16T07:32:58.036Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1752,14 +1752,21 @@
       "durationSeconds": 5400,
       "course": "Безопасность жизнедеятельности",
       "courseType": "Сем",
-      "title": "Безопасность жизнедеятельности",
+      "title": "Защита населения при авариях на радиационно опасных объектах",
       "instructor": "",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Разбор результатов предыдущей контрольной работы — преподаватель указал на ошибки студентов в определении функциональных и территориальных подсистем РСЧС.  2.",
+      "topics": [
+        "территориальные подсистемы",
+        "функциональные подсистемы",
+        "Население",
+        "Территория"
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-12T07:30:34.673Z",
-      "recordingKey": "record:schedule:b7c6203b5113c699@msu-schedule"
+      "updatedAt": "2026-10-16T07:32:58.036Z",
+      "recordingKey": "record:schedule:b7c6203b5113c699@msu-schedule",
+      "plaudFileId": "0a80e0e2dfea9825b958b1b16e98fe16",
+      "shareUrl": "https://web.plaud.ai/s/pub_0843d905-b074-42fa-9eda-d43fb5cff9be::5l0CbO0VlS96_I9Z43UWO2kBY8q9u6cEEe2D5_4A7TJXZk-2MDGk5gC9Nr6qkA4cO5jZqfeaUgPJEJAC"
     },
     {
       "id": "schedule:417ba4111fb20802@msu-schedule",
