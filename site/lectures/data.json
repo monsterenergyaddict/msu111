@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-15T11:00:31.869Z",
+  "updatedAt": "2026-10-16T07:26:01.155Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1970,12 +1970,14 @@
       "courseType": "Лк",
       "title": "История мировой философии",
       "instructor": "Костикова Анна Анатольевна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "status": "ready",
+      "summary": "# 1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  **Мир мысли и мир чувств** — преподаватель начинает с противопоставления «мыслимого» (истинного) мира и мира, создаваемого чувственным восприятием и визуализацией; поднимается вопрос о представимости/непредставимости мысленного мира.  2.",
       "topics": [],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-15T09:15:21.861Z",
-      "recordingKey": "record:schedule:92bee25e870d92b3@msu-schedule"
+      "updatedAt": "2026-10-16T07:26:01.155Z",
+      "recordingKey": "record:schedule:92bee25e870d92b3@msu-schedule",
+      "plaudFileId": "2e03db7912e3d9f0e69152ec3ab305a8",
+      "shareUrl": "https://web.plaud.ai/s/pub_5d4842fd-8593-4690-a609-971c00f3c8b6::6_aohPqpJ8-t0dOxiRNf284Y_xabREeQm-UGTHCZGUWD2egZgHrIOzUYY6bplc6dLRX9SFCR2ZBGYrMC"
     },
     {
       "id": "schedule:slot:2026-10-15T12:30:00+03:00",
