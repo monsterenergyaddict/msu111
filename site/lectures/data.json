@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T13:30:52.455Z",
+  "updatedAt": "2026-10-16T13:46:38.792Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2130,14 +2130,21 @@
       "durationSeconds": 5400,
       "course": "Логика",
       "courseType": "Лк",
-      "title": "Логика",
+      "title": "Логическое следование, эквивалентность и правильность умозаключений",
       "instructor": "Ильин Алексей Алексеевич",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Логическое следование формул — преподаватель даёт определение отношения логического следования между формулами А и В через понятие интерпретации (случая), при котором А истинно, а В ложно.  2.",
+      "topics": [
+        "A и B могут быть одновременно истинны;",
+        "A и B могут быть одновременно ложны;",
+        "ни одна не следует из другой;",
+        "истинностное значение одной не влияет на значение другой."
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-16T07:30:52.733Z",
-      "recordingKey": "record:schedule:c65de44318117c2a@msu-schedule"
+      "updatedAt": "2026-10-16T13:46:38.792Z",
+      "recordingKey": "record:schedule:c65de44318117c2a@msu-schedule",
+      "plaudFileId": "37fb64b73d400047c3d9da8d6c401520",
+      "shareUrl": "https://web.plaud.ai/s/pub_92294580-5cbb-4b3a-a5c0-cd1f96844785::hx4HFrz_bOgH1Z802tQibn2oTxXbePkgT_t48TVq615MxorJy0v0pCRl3w1YEYfXSUpx3O1fCzCVujYC"
     },
     {
       "id": "schedule:405650be5d8fac30@msu-schedule",
