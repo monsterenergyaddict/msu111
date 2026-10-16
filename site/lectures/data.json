@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:35:01.803Z",
+  "updatedAt": "2026-10-16T07:35:22.247Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1518,14 +1518,21 @@
       "durationSeconds": 5400,
       "course": "История мировой литературы",
       "courseType": "Сем",
-      "title": "История мировой литературы",
+      "title": "«Илиада», монотеизм и политеизм в античной культуре",
       "instructor": "Карпухина Светлана Павловна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Сюжетная структура «Илиады» — обсуждение того, есть ли в произведении единая сквозная сюжетная линия, сравнение с другими эпосами.  2.",
+      "topics": [
+        "Отсутствие единого главного героя",
+        "Огромный временной охват",
+        "Смена фокала повествования",
+        "Множественность сторон конфликта"
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-07T07:30:36.444Z",
-      "recordingKey": "record:schedule:6df4cd237c06d76e@msu-schedule"
+      "updatedAt": "2026-10-16T07:35:22.247Z",
+      "recordingKey": "record:schedule:6df4cd237c06d76e@msu-schedule",
+      "plaudFileId": "2f3a5ba5d702a948cbc8f3216b8926d9",
+      "shareUrl": "https://web.plaud.ai/s/pub_9dddae83-5e71-4852-ad20-09d4f016a298::u_ZCYbRESZV-MgtKTB2GE20oxmU4VRAdZ1fRBKILSXBqfwUexyjaRiNQO2uF2tLJrv5kXZiKGcg6DDwC"
     },
     {
       "id": "schedule:7004b300541c7c35@msu-schedule",
