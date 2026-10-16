@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:34:22.348Z",
+  "updatedAt": "2026-10-16T07:34:42.011Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1608,14 +1608,21 @@
       "durationSeconds": 5400,
       "course": "История мировой философии",
       "courseType": "Лк",
-      "title": "История мировой философии",
+      "title": "Ранняя греческая философия - от Милетской школы до Гераклита",
       "instructor": "Костикова Анна Анатольевна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Природно-географические факторы формирования цивилизации — преподаватель перечисляет факторы: климат, ресурсы, география (море, реки, горы, озёра), тип почвы.  2.",
+      "topics": [
+        "климатические условия",
+        "экономические условия региона",
+        "наличие природных ресурсов",
+        "географические условия"
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-08T07:30:40.742Z",
-      "recordingKey": "record:schedule:69bc0e2c6df190df@msu-schedule"
+      "updatedAt": "2026-10-16T07:34:42.011Z",
+      "recordingKey": "record:schedule:69bc0e2c6df190df@msu-schedule",
+      "plaudFileId": "10d4a4c72a8cdffbe821d285b5805a6a",
+      "shareUrl": "https://web.plaud.ai/s/pub_801ef93f-16c5-4ba4-8132-e06ce531e65d::-SVq5e3HUsXHaBFzGW0y52Aik_dAo8CdVOkIl14KSuerVPPbwUffbu2nMhjpmqncb9IPCEQ3Ij6C7j4C"
     },
     {
       "id": "schedule:0d7e9e2963c03f73@msu-schedule",
