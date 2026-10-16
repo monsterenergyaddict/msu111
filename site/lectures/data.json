@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T14:02:25.758Z",
+  "updatedAt": "2026-10-16T15:15:52.561Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2142,7 +2142,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T13:46:38.792Z",
-      "recordingKey": "record:schedule:c65de44318117c2a@msu-schedule",
+      "recordingKey": "plaud:37fb64b73d400047c3d9da8d6c401520",
       "plaudFileId": "37fb64b73d400047c3d9da8d6c401520",
       "shareUrl": "https://web.plaud.ai/s/pub_92294580-5cbb-4b3a-a5c0-cd1f96844785::hx4HFrz_bOgH1Z802tQibn2oTxXbePkgT_t48TVq615MxorJy0v0pCRl3w1YEYfXSUpx3O1fCzCVujYC"
     },
@@ -2167,7 +2167,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T14:02:25.758Z",
-      "recordingKey": "record:schedule:405650be5d8fac30@msu-schedule",
+      "recordingKey": "plaud:12e14965333ac671e9b7b256e0465011",
       "plaudFileId": "12e14965333ac671e9b7b256e0465011",
       "shareUrl": "https://web.plaud.ai/s/pub_28fecbe0-594a-4037-b14e-afb4f1c74dbe::u00LxKcqe-TgRRfgYNi397PURyMnMSyMrjqGKzsmbiWHFu-YtO7BQYGsqHYNEZQp3CcRFwmTvMDaegsC"
     },
@@ -2211,7 +2211,25 @@
       "lessonNumber": 4,
       "updatedAt": "2026-10-16T14:01:58.607Z",
       "plaudFileId": "6097f3b0f22556de01fc8d3213cb0e53",
-      "shareUrl": "https://web.plaud.ai/s/pub_88d3270e-9712-4be2-9d95-aa07b2019d66::SL9KaezOfl2rgGv8C7I1usd_tQEzd6ej_YlcmFzeSvMMh7aPdMUIf50-rGNvCBJKCPaUA-uUJAPkqZcC"
+      "shareUrl": "https://web.plaud.ai/s/pub_88d3270e-9712-4be2-9d95-aa07b2019d66::SL9KaezOfl2rgGv8C7I1usd_tQEzd6ej_YlcmFzeSvMMh7aPdMUIf50-rGNvCBJKCPaUA-uUJAPkqZcC",
+      "recordingKey": "plaud:6097f3b0f22556de01fc8d3213cb0e53"
+    },
+    {
+      "id": "schedule:1b5dfaef3269ee24@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "1b5dfaef3269ee24@msu-schedule",
+      "scheduledStartsAt": "2026-10-16T16:45:00+03:00",
+      "startedAt": "2026-10-16T16:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "двОсновы работы с информацией",
+      "courseType": "Лк",
+      "title": "двОсновы работы с информацией",
+      "instructor": "Костикова Анна Анатольевна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 5,
+      "updatedAt": "2026-10-16T15:15:52.561Z"
     }
   ]
 }
