@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:33:18.442Z",
+  "updatedAt": "2026-10-16T07:33:38.442Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1680,14 +1680,21 @@
       "durationSeconds": 5400,
       "course": "Логика",
       "courseType": "Сем",
-      "title": "Логика",
+      "title": "Знак, значение и смысл — принципы однозначности и предметности",
       "instructor": "Григорьев Олег Михайлович",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Организационное начало занятия — короткий обмен репликами преподавателя и студентов перед переходом к теме.  2.",
+      "topics": [
+        "Особенно важен в контекстах, где требуется точность изложения (научные, строгие тексты).",
+        "предметная дисциплина",
+        "раздел науки",
+        "способ рассуждения/манера мышления и поведения"
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-09T09:15:33.186Z",
-      "recordingKey": "record:schedule:18ec1abe0e03b958@msu-schedule"
+      "updatedAt": "2026-10-16T07:33:38.442Z",
+      "recordingKey": "record:schedule:18ec1abe0e03b958@msu-schedule",
+      "plaudFileId": "b5c68e6aab24d189ba0d7306a0e57c79",
+      "shareUrl": "https://web.plaud.ai/s/pub_e7b8a709-1e35-4b13-abf1-8001711c4508::nR_A8OpsaaD1wxyL7m6laptuw0P403T4y9I--qBLPHW65mGsOXYE-olYQXR_DlhvTCM1WLEoTFrCiIUC"
     },
     {
       "id": "schedule:dd9ce7a86c860ea8@msu-schedule",
