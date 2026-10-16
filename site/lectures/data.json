@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:36:04.676Z",
+  "updatedAt": "2026-10-16T07:36:25.553Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1338,14 +1338,21 @@
       "durationSeconds": 5400,
       "course": "Логика",
       "courseType": "Сем",
-      "title": "Логика",
+      "title": "Классификация атрибутивных высказываний и отрицание суждений",
       "instructor": "Григорьев Олег Михайлович",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Организационное вступление — краткое обсуждение представлений студентов о философии, культуре, миграции [неясный фрагмент, вступительная часть плохо расшифрована].  2.",
+      "topics": [
+        "утвердительной",
+        "отрицательной",
+        "Кто-то говорит: «Некоторые студентки являются отличницами».",
+        "Вы говорите: «Это неверно»."
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-02T09:15:32.598Z",
-      "recordingKey": "record:schedule:e2b6629afa4f32b0@msu-schedule"
+      "updatedAt": "2026-10-16T07:36:25.553Z",
+      "recordingKey": "record:schedule:e2b6629afa4f32b0@msu-schedule",
+      "plaudFileId": "af3c1d575d56f02868b83884086c833e",
+      "shareUrl": "https://web.plaud.ai/s/pub_58ea75f0-7a0a-417b-8f9b-918d3200eb17::KTU7nQSkKHZtbLBP6vPlyvVf8YSGoDRbePObGnTO1QtKCYXI8GjorP9kGX5ZcBiyPQDqO_L7Yk46kjQC"
     },
     {
       "id": "schedule:a5c90d1819ad98d4@msu-schedule",
