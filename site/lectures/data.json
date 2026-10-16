@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:32:16.044Z",
+  "updatedAt": "2026-10-16T07:32:35.977Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1770,14 +1770,21 @@
       "durationSeconds": 5400,
       "course": "Русский язык и культура речи",
       "courseType": "Сем",
-      "title": "Русский язык и культура речи",
+      "title": "Языковая норма, формы существования языка и диалекты",
       "instructor": "Арутюнова Марина Араиковна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Организационные моменты и дисциплина (занятие 1) — преподаватель делает замечание группе о неправильной отправке файлов (все одним письмом), просит присылать работы раздельно с указанием точного времени выполнения.  2.",
+      "topics": [
+        "Национальный язык",
+        "Литературный язык",
+        "Просторечие",
+        "Стабильность vs развитие."
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-12T09:15:31.597Z",
-      "recordingKey": "record:schedule:417ba4111fb20802@msu-schedule"
+      "updatedAt": "2026-10-16T07:32:35.977Z",
+      "recordingKey": "record:schedule:417ba4111fb20802@msu-schedule",
+      "plaudFileId": "b6222fab46381cd70c6ca4b14b918693",
+      "shareUrl": "https://web.plaud.ai/s/pub_9e571d46-647b-46ec-a57f-ab3bd91f323b::57TaYmYaaDYBJ6xUWy4A_gfDriBpH-RyrDLGwuE1I9t5xSvRRiofi65ZFjAgp5N7WtBInnx0Ys4X9Z0C"
     },
     {
       "id": "schedule:slot:2026-10-12T12:30:00+03:00",
