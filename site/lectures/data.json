@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T14:01:58.607Z",
+  "updatedAt": "2026-10-16T14:02:25.758Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2155,14 +2155,21 @@
       "durationSeconds": 5400,
       "course": "Логика",
       "courseType": "Сем",
-      "title": "Логика",
+      "title": "Смысл, значение и логическая структура высказываний",
       "instructor": "Григорьев Олег Михайлович",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Языковые выражения без значения — обсуждение того, какие выражения (бессмысленный набор букв, устойчивые описания с пустым объектом) не имеют значения или имеют смысл без значения.  2.",
+      "topics": [
+        "Бессмысленный набор букв/символов",
+        "Осмысленные выражения без объекта (устрии, пустые имена)",
+        "«Множество людей, ныне живущих»",
+        "пустого имени"
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-16T09:15:52.516Z",
-      "recordingKey": "record:schedule:405650be5d8fac30@msu-schedule"
+      "updatedAt": "2026-10-16T14:02:25.758Z",
+      "recordingKey": "record:schedule:405650be5d8fac30@msu-schedule",
+      "plaudFileId": "12e14965333ac671e9b7b256e0465011",
+      "shareUrl": "https://web.plaud.ai/s/pub_28fecbe0-594a-4037-b14e-afb4f1c74dbe::u00LxKcqe-TgRRfgYNi397PURyMnMSyMrjqGKzsmbiWHFu-YtO7BQYGsqHYNEZQp3CcRFwmTvMDaegsC"
     },
     {
       "id": "schedule:663eca585bdb820c@msu-schedule",
