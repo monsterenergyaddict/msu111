@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:31:33.848Z",
+  "updatedAt": "2026-10-16T07:31:55.231Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1824,14 +1824,21 @@
       "durationSeconds": 5400,
       "course": "История России",
       "courseType": "Сем",
-      "title": "История России",
+      "title": "Древнерусское право и Русь под властью Орды",
       "instructor": "Нестерова Ксения Александровна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Понятие правовых норм и способ их создания — преподаватель вводит понятие правовой нормы и говорит о сложившемся способе создания, издания и редактирования правовых норм в средневековой Руси.  2.",
+      "topics": [
+        "Уголовные",
+        "Имущественные",
+        "уставная земская норма",
+        "Светский (местный) суд"
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-13T07:30:43.403Z",
-      "recordingKey": "record:schedule:86550a77827eaacd@msu-schedule"
+      "updatedAt": "2026-10-16T07:31:55.231Z",
+      "recordingKey": "record:schedule:86550a77827eaacd@msu-schedule",
+      "plaudFileId": "63cda08ac25729fb4d8afaf279ab6d7a",
+      "shareUrl": "https://web.plaud.ai/s/pub_8f99f969-ce24-4ba9-a468-7137d872f662::7JcZ4pamxo3PB8lAEYBKW6B4FQpbQkeZljl6M9kCBF9dF5jztBQy36U7SIAf_j-rMIrV6B4DWxYteBEC"
     },
     {
       "id": "schedule:4bd7cb410a09aa66@msu-schedule",
