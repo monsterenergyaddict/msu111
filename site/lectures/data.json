@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:26:01.155Z",
+  "updatedAt": "2026-10-16T07:30:44.122Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1968,13 +1968,18 @@
       "durationSeconds": 5400,
       "course": "История мировой философии",
       "courseType": "Лк",
-      "title": "История мировой философии",
+      "title": "Апории Зенона, Пифагор и учение Эмпедокла о стихиях",
       "instructor": "Костикова Анна Анатольевна",
       "status": "ready",
       "summary": "# 1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  **Мир мысли и мир чувств** — преподаватель начинает с противопоставления «мыслимого» (истинного) мира и мира, создаваемого чувственным восприятием и визуализацией; поднимается вопрос о представимости/непредставимости мысленного мира.  2.",
-      "topics": [],
+      "topics": [
+        "мир мысли (мыслимый мир)",
+        "мир чувственный",
+        "мир единый и неизменный",
+        "мир множественный и изменяемый"
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-16T07:26:01.155Z",
+      "updatedAt": "2026-10-16T07:30:44.122Z",
       "recordingKey": "record:schedule:92bee25e870d92b3@msu-schedule",
       "plaudFileId": "2e03db7912e3d9f0e69152ec3ab305a8",
       "shareUrl": "https://web.plaud.ai/s/pub_5d4842fd-8593-4690-a609-971c00f3c8b6::6_aohPqpJ8-t0dOxiRNf284Y_xabREeQm-UGTHCZGUWD2egZgHrIOzUYY6bplc6dLRX9SFCR2ZBGYrMC"
