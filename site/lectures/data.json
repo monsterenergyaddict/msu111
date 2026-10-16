@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:36:25.553Z",
+  "updatedAt": "2026-10-16T09:15:52.516Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1350,7 +1350,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T07:36:25.553Z",
-      "recordingKey": "record:schedule:e2b6629afa4f32b0@msu-schedule",
+      "recordingKey": "plaud:af3c1d575d56f02868b83884086c833e",
       "plaudFileId": "af3c1d575d56f02868b83884086c833e",
       "shareUrl": "https://web.plaud.ai/s/pub_58ea75f0-7a0a-417b-8f9b-918d3200eb17::KTU7nQSkKHZtbLBP6vPlyvVf8YSGoDRbePObGnTO1QtKCYXI8GjorP9kGX5ZcBiyPQDqO_L7Yk46kjQC"
     },
@@ -1447,7 +1447,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T07:36:04.676Z",
-      "recordingKey": "record:schedule:cd947fa14961b122@msu-schedule",
+      "recordingKey": "plaud:565177c6fde92855067eadf49e4781c9",
       "plaudFileId": "565177c6fde92855067eadf49e4781c9",
       "shareUrl": "https://web.plaud.ai/s/pub_ed5b51ef-d052-40c8-9aea-b00c9d803e08::ZxLTO0AFl4JgG8nCALm_nLll_qmz3wRm0Mm0G1MtvgH7ViJanEZWbXKOEq22Z22dQXJeAE5Yep5QnVkC"
     },
@@ -1490,7 +1490,7 @@
       ],
       "lessonNumber": 4,
       "updatedAt": "2026-10-16T07:35:44.813Z",
-      "recordingKey": "record:schedule:77a47cfa8602790e@msu-schedule",
+      "recordingKey": "plaud:13e581a66ef96b2fb4f8e85ed42da452",
       "plaudFileId": "13e581a66ef96b2fb4f8e85ed42da452",
       "shareUrl": "https://web.plaud.ai/s/pub_d89f2e96-94b3-4976-ad56-87703c1f98eb::QI9JlIVCrF_O1BDtQF5ATEtaf7u4aV2W5I3ljSJbS5dRXR9TVwrfxxJcjfTgzvvvn8imj8v-HBF2_tgC"
     },
@@ -1551,7 +1551,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T07:35:22.247Z",
-      "recordingKey": "record:schedule:6df4cd237c06d76e@msu-schedule",
+      "recordingKey": "plaud:2f3a5ba5d702a948cbc8f3216b8926d9",
       "plaudFileId": "2f3a5ba5d702a948cbc8f3216b8926d9",
       "shareUrl": "https://web.plaud.ai/s/pub_9dddae83-5e71-4852-ad20-09d4f016a298::u_ZCYbRESZV-MgtKTB2GE20oxmU4VRAdZ1fRBKILSXBqfwUexyjaRiNQO2uF2tLJrv5kXZiKGcg6DDwC"
     },
@@ -1576,7 +1576,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T07:35:01.803Z",
-      "recordingKey": "record:schedule:7004b300541c7c35@msu-schedule",
+      "recordingKey": "plaud:cd4d50ee90be49c2de37da353be9daff",
       "plaudFileId": "cd4d50ee90be49c2de37da353be9daff",
       "shareUrl": "https://web.plaud.ai/s/pub_e00f9f42-df37-4312-bc9f-c8fa277ab160::pRJsXllSobyJkZ05aFIZZDPpSDQoREMdPn9fL1pW5lqs29e7U-nKdH1z98nMupqI_kWWm3qSYglf5a4C"
     },
@@ -1655,7 +1655,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T07:34:42.011Z",
-      "recordingKey": "record:schedule:69bc0e2c6df190df@msu-schedule",
+      "recordingKey": "plaud:10d4a4c72a8cdffbe821d285b5805a6a",
       "plaudFileId": "10d4a4c72a8cdffbe821d285b5805a6a",
       "shareUrl": "https://web.plaud.ai/s/pub_801ef93f-16c5-4ba4-8132-e06ce531e65d::-SVq5e3HUsXHaBFzGW0y52Aik_dAo8CdVOkIl14KSuerVPPbwUffbu2nMhjpmqncb9IPCEQ3Ij6C7j4C"
     },
@@ -1680,7 +1680,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T07:34:22.348Z",
-      "recordingKey": "record:schedule:0d7e9e2963c03f73@msu-schedule",
+      "recordingKey": "plaud:c752b8d73a4c998e8d7a79981804ab83",
       "plaudFileId": "c752b8d73a4c998e8d7a79981804ab83",
       "shareUrl": "https://web.plaud.ai/s/pub_05d9a970-3e85-40bf-903c-bc7bef004086::aDfl8WNaBmGREdtWL2Pe7byXPdTG07Avs5rCkByK1uCiVd-PhBN0u3PIIiiRVVuVhdaUyPpH4WSKASwC"
     },
@@ -1723,7 +1723,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T07:33:59.938Z",
-      "recordingKey": "record:schedule:374387636a7a5d76@msu-schedule",
+      "recordingKey": "plaud:8681714ad52dd205373420c28499ba0f",
       "plaudFileId": "8681714ad52dd205373420c28499ba0f",
       "shareUrl": "https://web.plaud.ai/s/pub_72d77e11-ca61-4823-8d47-5a8879f4f348::ChI0pfmgqy0FcXatJxfdOk7lSPK_fLTEZ4dkBG4T7ZOp4GX1OjjyYrpWdlobhrzktgZadOugqm9OO1cC"
     },
@@ -1748,7 +1748,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T07:33:38.442Z",
-      "recordingKey": "record:schedule:18ec1abe0e03b958@msu-schedule",
+      "recordingKey": "plaud:b5c68e6aab24d189ba0d7306a0e57c79",
       "plaudFileId": "b5c68e6aab24d189ba0d7306a0e57c79",
       "shareUrl": "https://web.plaud.ai/s/pub_e7b8a709-1e35-4b13-abf1-8001711c4508::nR_A8OpsaaD1wxyL7m6laptuw0P403T4y9I--qBLPHW65mGsOXYE-olYQXR_DlhvTCM1WLEoTFrCiIUC"
     },
@@ -1791,7 +1791,7 @@
       ],
       "lessonNumber": 4,
       "updatedAt": "2026-10-16T07:33:18.442Z",
-      "recordingKey": "record:schedule:5386b312fd7b0515@msu-schedule",
+      "recordingKey": "plaud:c6ef4d54cf164a1d1004cc677f818f98",
       "plaudFileId": "c6ef4d54cf164a1d1004cc677f818f98",
       "shareUrl": "https://web.plaud.ai/s/pub_b3f8d5a3-9cae-40b5-a586-3ab5c8eeebc2::AtAC9QrTfe7JIM10SEwcatDiSybqkblWPab4kC8CcTbuPQeyH47_0N3seE67sk1PxVV7aXp1yS_S9_wC"
     },
@@ -1834,7 +1834,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T07:32:58.036Z",
-      "recordingKey": "record:schedule:b7c6203b5113c699@msu-schedule",
+      "recordingKey": "plaud:0a80e0e2dfea9825b958b1b16e98fe16",
       "plaudFileId": "0a80e0e2dfea9825b958b1b16e98fe16",
       "shareUrl": "https://web.plaud.ai/s/pub_0843d905-b074-42fa-9eda-d43fb5cff9be::5l0CbO0VlS96_I9Z43UWO2kBY8q9u6cEEe2D5_4A7TJXZk-2MDGk5gC9Nr6qkA4cO5jZqfeaUgPJEJAC"
     },
@@ -1859,7 +1859,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T07:32:35.977Z",
-      "recordingKey": "record:schedule:417ba4111fb20802@msu-schedule",
+      "recordingKey": "plaud:b6222fab46381cd70c6ca4b14b918693",
       "plaudFileId": "b6222fab46381cd70c6ca4b14b918693",
       "shareUrl": "https://web.plaud.ai/s/pub_9e571d46-647b-46ec-a57f-ab3bd91f323b::57TaYmYaaDYBJ6xUWy4A_gfDriBpH-RyrDLGwuE1I9t5xSvRRiofi65ZFjAgp5N7WtBInnx0Ys4X9Z0C"
     },
@@ -1902,7 +1902,7 @@
       ],
       "lessonNumber": 4,
       "updatedAt": "2026-10-16T07:32:16.044Z",
-      "recordingKey": "record:schedule:dcf4bf8687ee8ba2@msu-schedule",
+      "recordingKey": "plaud:376eade517ffb8e2d8d2e5397eb29d0b",
       "plaudFileId": "376eade517ffb8e2d8d2e5397eb29d0b",
       "shareUrl": "https://web.plaud.ai/s/pub_2b1f2a95-0955-4ca7-ac78-9a541341400e::wqLE4DR_XMIv6AuUaSVp0JD1YnATpYQNhT4DySBKPXIg_1NQTotBwoEA6l1NFpcUX_VQ9hEXY7S3hWkC"
     },
@@ -1927,7 +1927,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T07:31:55.231Z",
-      "recordingKey": "record:schedule:86550a77827eaacd@msu-schedule",
+      "recordingKey": "plaud:63cda08ac25729fb4d8afaf279ab6d7a",
       "plaudFileId": "63cda08ac25729fb4d8afaf279ab6d7a",
       "shareUrl": "https://web.plaud.ai/s/pub_8f99f969-ce24-4ba9-a468-7137d872f662::7JcZ4pamxo3PB8lAEYBKW6B4FQpbQkeZljl6M9kCBF9dF5jztBQy36U7SIAf_j-rMIrV6B4DWxYteBEC"
     },
@@ -1970,7 +1970,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T07:31:33.848Z",
-      "recordingKey": "record:schedule:be5450071adff506@msu-schedule",
+      "recordingKey": "plaud:98a97bad1b8edf27057764e710960bc8",
       "plaudFileId": "98a97bad1b8edf27057764e710960bc8",
       "shareUrl": "https://web.plaud.ai/s/pub_c8a7a0bc-2bee-421d-b25c-284b75d6c90a::xyER8X9WIXWrJrXPMI7CdAsYiqQiXY_mf25WruKqdzLa2uYJkKLJo9AUFcW7_KIkBUYc8SipyJ9G1VkC"
     },
@@ -1995,7 +1995,7 @@
       ],
       "lessonNumber": 2,
       "updatedAt": "2026-10-16T07:31:15.643Z",
-      "recordingKey": "record:schedule:f9a8fbac19002e19@msu-schedule",
+      "recordingKey": "plaud:9449ac71d7732bce7ad71be31ba2b249",
       "plaudFileId": "9449ac71d7732bce7ad71be31ba2b249",
       "shareUrl": "https://web.plaud.ai/s/pub_ad03b664-a74d-4b1e-b68d-03587ee88ff8::iOC78axni6RYllOUJEAVXisSST70H0GOL8HaEFNdcbyh6P31cBrwuWeicAXNMxe38iSSmih8MHq5M-0C"
     },
@@ -2074,7 +2074,7 @@
       ],
       "lessonNumber": 1,
       "updatedAt": "2026-10-16T07:30:55.518Z",
-      "recordingKey": "record:schedule:6f320a0086698bfb@msu-schedule",
+      "recordingKey": "plaud:a33cd16bd85435d84296b765d4e4134d",
       "plaudFileId": "a33cd16bd85435d84296b765d4e4134d",
       "shareUrl": "https://web.plaud.ai/s/pub_2325ae85-50e9-41db-bfd7-8a45950ea461::3wmMRQNrtN3nBbqxOLMa0liMk-_fMoEP6Bh1eKZZLJhnzf2mdfgtsoHw3OoToIyuZLhXt2b8dN2oJsoC"
     },
@@ -2136,7 +2136,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-16T07:30:52.733Z"
+      "updatedAt": "2026-10-16T07:30:52.733Z",
+      "recordingKey": "record:schedule:c65de44318117c2a@msu-schedule"
+    },
+    {
+      "id": "schedule:405650be5d8fac30@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "405650be5d8fac30@msu-schedule",
+      "scheduledStartsAt": "2026-10-16T10:45:00+03:00",
+      "startedAt": "2026-10-16T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Логика",
+      "courseType": "Сем",
+      "title": "Логика",
+      "instructor": "Григорьев Олег Михайлович",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-10-16T09:15:52.516Z"
     }
   ]
 }
