@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:30:52.733Z",
+  "updatedAt": "2026-10-16T07:30:55.518Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1950,14 +1950,21 @@
       "durationSeconds": 5400,
       "course": "История мировой философии",
       "courseType": "Лк",
-      "title": "История мировой философии",
+      "title": "Зарождение античной философии — от натурфилософов до элеатов",
       "instructor": "Костикова Анна Анатольевна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Вводная часть про профессиональную этику и карьеру — преподаватель рассуждает о профессиональной судьбе (пример пиарщицы, карьера «Шахну из Израиля»), о разнице между личным и профессиональным образом жизни, о корпоративной культуре японских и корейских компаний, где работа воспринимается как часть семьи.  2.",
+      "topics": [
+        "Анаксимандр",
+        "Анаксимен",
+        "река символизирует природу и течение;",
+        "природа меняется (ничто не остаётся неизменным);"
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-15T07:30:33.323Z",
-      "recordingKey": "record:schedule:6f320a0086698bfb@msu-schedule"
+      "updatedAt": "2026-10-16T07:30:55.518Z",
+      "recordingKey": "record:schedule:6f320a0086698bfb@msu-schedule",
+      "plaudFileId": "a33cd16bd85435d84296b765d4e4134d",
+      "shareUrl": "https://web.plaud.ai/s/pub_2325ae85-50e9-41db-bfd7-8a45950ea461::3wmMRQNrtN3nBbqxOLMa0liMk-_fMoEP6Bh1eKZZLJhnzf2mdfgtsoHw3OoToIyuZLhXt2b8dN2oJsoC"
     },
     {
       "id": "schedule:92bee25e870d92b3@msu-schedule",
