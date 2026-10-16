@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:33:38.442Z",
+  "updatedAt": "2026-10-16T07:33:59.938Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1662,14 +1662,21 @@
       "durationSeconds": 5400,
       "course": "Логика",
       "courseType": "Лк",
-      "title": "Логика",
+      "title": "Логика высказываний, импликация и таблицы истинности",
       "instructor": "Ильин Алексей Алексеевич",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Истинность импликации и условных высказываний — преподаватель разбирает, когда импликация («если А, то В») истинна, а когда ложна, на примере условий получения «автомата» по курсу (пропуск занятий).  2.",
+      "topics": [
+        "А (основание)",
+        "В (следствие)",
+        "Студент не пропустил занятий, и автомат поставлен",
+        "Студент пропустил занятия, и автомат не поставлен"
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-09T07:30:42.274Z",
-      "recordingKey": "record:schedule:374387636a7a5d76@msu-schedule"
+      "updatedAt": "2026-10-16T07:33:59.938Z",
+      "recordingKey": "record:schedule:374387636a7a5d76@msu-schedule",
+      "plaudFileId": "8681714ad52dd205373420c28499ba0f",
+      "shareUrl": "https://web.plaud.ai/s/pub_72d77e11-ca61-4823-8d47-5a8879f4f348::ChI0pfmgqy0FcXatJxfdOk7lSPK_fLTEZ4dkBG4T7ZOp4GX1OjjyYrpWdlobhrzktgZadOugqm9OO1cC"
     },
     {
       "id": "schedule:18ec1abe0e03b958@msu-schedule",
