@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:31:15.643Z",
+  "updatedAt": "2026-10-16T07:31:33.848Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1860,14 +1860,21 @@
       "durationSeconds": 5400,
       "course": "История мировой литературы",
       "courseType": "Сем",
-      "title": "История мировой литературы",
+      "title": "Осевое время, периодизация истории и зарождение философии в Древней Греции",
       "instructor": "Карпухина Светлана Павловна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Организационное начало занятия — преподаватель напоминает о необходимости включиться в рабочий режим, обсуждает с группой, что было пройдено на прошлом занятии.  2.",
+      "topics": [
+        "тему написания мифов и сказок о богах «на заказ»;",
+        "конфуцианства и даосизма",
+        "не заставить студентов «побольше прочитать» и продемонстрировать формальные знания;",
+        "самостоятельному критическому мышлению"
+      ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-14T07:30:32.224Z",
-      "recordingKey": "record:schedule:be5450071adff506@msu-schedule"
+      "updatedAt": "2026-10-16T07:31:33.848Z",
+      "recordingKey": "record:schedule:be5450071adff506@msu-schedule",
+      "plaudFileId": "98a97bad1b8edf27057764e710960bc8",
+      "shareUrl": "https://web.plaud.ai/s/pub_c8a7a0bc-2bee-421d-b25c-284b75d6c90a::xyER8X9WIXWrJrXPMI7CdAsYiqQiXY_mf25WruKqdzLa2uYJkKLJo9AUFcW7_KIkBUYc8SipyJ9G1VkC"
     },
     {
       "id": "schedule:f9a8fbac19002e19@msu-schedule",
