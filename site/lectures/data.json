@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:34:42.011Z",
+  "updatedAt": "2026-10-16T07:35:01.803Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1536,14 +1536,21 @@
       "durationSeconds": 5400,
       "course": "Русский язык и культура речи",
       "courseType": "Лк",
-      "title": "Русский язык и культура речи",
+      "title": "Норма языка и её признаки",
       "instructor": "Арутюнова Марина Араиковна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Введение в тему — преподаватель предупреждает, что тема «Норма языка» сложнее предыдущих, просит внимания и конспектирования.  2.",
+      "topics": [
+        "требование стабильности",
+        "возможностью сознательного вмешательства",
+        "Фонетические варианты",
+        "акцентологические"
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-07T09:15:37.417Z",
-      "recordingKey": "record:schedule:7004b300541c7c35@msu-schedule"
+      "updatedAt": "2026-10-16T07:35:01.803Z",
+      "recordingKey": "record:schedule:7004b300541c7c35@msu-schedule",
+      "plaudFileId": "cd4d50ee90be49c2de37da353be9daff",
+      "shareUrl": "https://web.plaud.ai/s/pub_e00f9f42-df37-4312-bc9f-c8fa277ab160::pRJsXllSobyJkZ05aFIZZDPpSDQoREMdPn9fL1pW5lqs29e7U-nKdH1z98nMupqI_kWWm3qSYglf5a4C"
     },
     {
       "id": "schedule:71d01c70aac75a20@msu-schedule",
