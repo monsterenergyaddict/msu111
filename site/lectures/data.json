@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:31:55.231Z",
+  "updatedAt": "2026-10-16T07:32:16.044Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1806,14 +1806,21 @@
       "durationSeconds": 5400,
       "course": "История России",
       "courseType": "Лк",
-      "title": "История России",
+      "title": "Культура и письменность Древней Руси",
       "instructor": "Ткаченко Виктория Владимировна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ 1.  Технические вступительные моменты — организационные разговоры преподавателей/студентов перед началом лекции (загрузка презентации, QR-код с прошлой лекции), не относящиеся к содержанию.  2.",
+      "topics": [
+        "архитектуру,",
+        "иконопись",
+        "литературу,",
+        "иногда также науку и образование."
+      ],
       "lessonNumber": 4,
-      "updatedAt": "2026-10-12T13:30:35.661Z",
-      "recordingKey": "record:schedule:dcf4bf8687ee8ba2@msu-schedule"
+      "updatedAt": "2026-10-16T07:32:16.044Z",
+      "recordingKey": "record:schedule:dcf4bf8687ee8ba2@msu-schedule",
+      "plaudFileId": "376eade517ffb8e2d8d2e5397eb29d0b",
+      "shareUrl": "https://web.plaud.ai/s/pub_2b1f2a95-0955-4ca7-ac78-9a541341400e::wqLE4DR_XMIv6AuUaSVp0JD1YnATpYQNhT4DySBKPXIg_1NQTotBwoEA6l1NFpcUX_VQ9hEXY7S3hWkC"
     },
     {
       "id": "schedule:86550a77827eaacd@msu-schedule",
