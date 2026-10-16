@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T07:30:55.518Z",
+  "updatedAt": "2026-10-16T07:31:15.643Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1878,14 +1878,21 @@
       "durationSeconds": 5400,
       "course": "Русский язык и культура речи",
       "courseType": "Лк",
-      "title": "Русский язык и культура речи",
+      "title": "Системный подход, понятие системы и языкового знака",
       "instructor": "Арутюнова Марина Араиковна",
-      "status": "processing",
-      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
-      "topics": [],
+      "status": "ready",
+      "summary": "1.  О ЧЁМ БЫЛА ЛЕКЦИЯ Лекция посвящена основам системного подхода в изучении языка и общей теории знаков (семиотики).  Транскрипт содержит значительное количество неразборчивых и посторонних фрагментов (разговоры на разных языках, организационные вставки о студентах, посещаемости и т. п.",
+      "topics": [
+        "Единые и отдельные",
+        "Простые и сложные",
+        "Простые системы, созданные людьми, состоят из относительно однородных взаимодействующих элементов.",
+        "Сложные системы группируются в подсистемы"
+      ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-14T09:15:26.816Z",
-      "recordingKey": "record:schedule:f9a8fbac19002e19@msu-schedule"
+      "updatedAt": "2026-10-16T07:31:15.643Z",
+      "recordingKey": "record:schedule:f9a8fbac19002e19@msu-schedule",
+      "plaudFileId": "9449ac71d7732bce7ad71be31ba2b249",
+      "shareUrl": "https://web.plaud.ai/s/pub_ad03b664-a74d-4b1e-b68d-03587ee88ff8::iOC78axni6RYllOUJEAVXisSST70H0GOL8HaEFNdcbyh6P31cBrwuWeicAXNMxe38iSSmih8MHq5M-0C"
     },
     {
       "id": "schedule:27f0275c34a523b8@msu-schedule",
