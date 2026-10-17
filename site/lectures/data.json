@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-16T15:15:52.561Z",
+  "updatedAt": "2026-10-17T14:33:32.536Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2166,7 +2166,7 @@
         "пустого имени"
       ],
       "lessonNumber": 2,
-      "updatedAt": "2026-10-16T14:02:25.758Z",
+      "updatedAt": "2026-10-17T14:33:32.536Z",
       "recordingKey": "plaud:12e14965333ac671e9b7b256e0465011",
       "plaudFileId": "12e14965333ac671e9b7b256e0465011",
       "shareUrl": "https://web.plaud.ai/s/pub_28fecbe0-594a-4037-b14e-afb4f1c74dbe::u00LxKcqe-TgRRfgYNi397PURyMnMSyMrjqGKzsmbiWHFu-YtO7BQYGsqHYNEZQp3CcRFwmTvMDaegsC"
