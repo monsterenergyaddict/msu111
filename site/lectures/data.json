@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-17T16:01:10.511Z",
+  "updatedAt": "2026-10-17T16:16:16.591Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -1722,7 +1722,7 @@
         "Студент пропустил занятия, и автомат не поставлен"
       ],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-16T07:33:59.938Z",
+      "updatedAt": "2026-10-17T16:16:16.591Z",
       "recordingKey": "plaud:8681714ad52dd205373420c28499ba0f",
       "plaudFileId": "8681714ad52dd205373420c28499ba0f",
       "shareUrl": "https://web.plaud.ai/s/pub_72d77e11-ca61-4823-8d47-5a8879f4f348::ChI0pfmgqy0FcXatJxfdOk7lSPK_fLTEZ4dkBG4T7ZOp4GX1OjjyYrpWdlobhrzktgZadOugqm9OO1cC"
