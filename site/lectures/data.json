@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-17T16:16:16.591Z",
+  "updatedAt": "2026-10-19T07:30:22.012Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2229,7 +2229,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 5,
-      "updatedAt": "2026-10-16T15:15:52.561Z"
+      "updatedAt": "2026-10-16T15:15:52.561Z",
+      "recordingKey": "record:schedule:1b5dfaef3269ee24@msu-schedule"
+    },
+    {
+      "id": "schedule:5f00ea477af1af99@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "5f00ea477af1af99@msu-schedule",
+      "scheduledStartsAt": "2026-10-19T09:00:00+03:00",
+      "startedAt": "2026-10-19T09:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Безопасность жизнедеятельности",
+      "courseType": "Сем",
+      "title": "Безопасность жизнедеятельности",
+      "instructor": "",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 1,
+      "updatedAt": "2026-10-19T07:30:22.012Z"
     }
   ]
 }
