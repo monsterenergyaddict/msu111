@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-22T07:30:21.066Z",
+  "updatedAt": "2026-10-22T09:15:20.926Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2427,7 +2427,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-22T07:30:21.066Z"
+      "updatedAt": "2026-10-22T07:30:21.066Z",
+      "recordingKey": "record:schedule:54d6e888ad640873@msu-schedule"
+    },
+    {
+      "id": "schedule:0629d8eb880e4ef9@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "0629d8eb880e4ef9@msu-schedule",
+      "scheduledStartsAt": "2026-10-22T10:45:00+03:00",
+      "startedAt": "2026-10-22T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "История мировой литературы",
+      "courseType": "Лк",
+      "title": "История мировой литературы",
+      "instructor": "Бородай Татьяна Юрьевна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-10-22T09:15:20.926Z"
     }
   ]
 }
