@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-10-30T07:30:17.990Z",
+  "updatedAt": "2026-10-30T09:15:17.951Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2787,7 +2787,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-10-30T07:30:17.990Z"
+      "updatedAt": "2026-10-30T07:30:17.990Z",
+      "recordingKey": "record:schedule:5cd77b9391cceb72@msu-schedule"
+    },
+    {
+      "id": "schedule:1361ec02c8a5b71c@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "1361ec02c8a5b71c@msu-schedule",
+      "scheduledStartsAt": "2026-10-30T10:45:00+03:00",
+      "startedAt": "2026-10-30T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Логика",
+      "courseType": "Сем",
+      "title": "Логика",
+      "instructor": "Григорьев Олег Михайлович",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-10-30T09:15:17.951Z"
     }
   ]
 }
