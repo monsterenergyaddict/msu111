@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-11-02T11:00:50.606Z",
+  "updatedAt": "2026-11-02T13:30:42.310Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -2895,7 +2895,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 3,
-      "updatedAt": "2026-11-02T11:00:50.606Z"
+      "updatedAt": "2026-11-02T11:00:50.606Z",
+      "recordingKey": "record:schedule:slot:2026-11-02T12:30:00+03:00"
+    },
+    {
+      "id": "schedule:a055b12edd887aca@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "a055b12edd887aca@msu-schedule",
+      "scheduledStartsAt": "2026-11-02T15:00:00+03:00",
+      "startedAt": "2026-11-02T15:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "История России",
+      "courseType": "Лк",
+      "title": "История России",
+      "instructor": "Ткаченко Виктория Владимировна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 4,
+      "updatedAt": "2026-11-02T13:30:42.310Z"
     }
   ]
 }
