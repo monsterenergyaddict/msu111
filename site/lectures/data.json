@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-11-06T15:15:12.189Z",
+  "updatedAt": "2026-11-09T07:30:01.828Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -3093,7 +3093,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 5,
-      "updatedAt": "2026-11-06T15:15:12.189Z"
+      "updatedAt": "2026-11-06T15:15:12.189Z",
+      "recordingKey": "record:schedule:a22321c383203e74@msu-schedule"
+    },
+    {
+      "id": "schedule:fbdb2e8dc51a297f@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "fbdb2e8dc51a297f@msu-schedule",
+      "scheduledStartsAt": "2026-11-09T09:00:00+03:00",
+      "startedAt": "2026-11-09T09:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Безопасность жизнедеятельности",
+      "courseType": "Сем",
+      "title": "Безопасность жизнедеятельности",
+      "instructor": "Сарин Дмитрий Петрович",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 1,
+      "updatedAt": "2026-11-09T07:30:01.828Z"
     }
   ]
 }
