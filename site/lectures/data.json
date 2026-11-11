@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-11-11T11:15:00.871Z",
+  "updatedAt": "2026-11-11T13:30:00.682Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -3219,7 +3219,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 3,
-      "updatedAt": "2026-11-11T11:15:00.871Z"
+      "updatedAt": "2026-11-11T11:15:00.871Z",
+      "recordingKey": "record:schedule:da9b39a0bf930370@msu-schedule"
+    },
+    {
+      "id": "schedule:b850423d8218fc78@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "b850423d8218fc78@msu-schedule",
+      "scheduledStartsAt": "2026-11-11T15:00:00+03:00",
+      "startedAt": "2026-11-11T15:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "Межфакультетский учебный курс",
+      "courseType": "Лк",
+      "title": "Межфакультетский учебный курс",
+      "instructor": "",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 4,
+      "updatedAt": "2026-11-11T13:30:00.682Z"
     }
   ]
 }
