@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-11-23T13:30:28.816Z",
+  "updatedAt": "2026-11-24T07:30:28.620Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -3759,7 +3759,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 4,
-      "updatedAt": "2026-11-23T13:30:28.816Z"
+      "updatedAt": "2026-11-23T13:30:28.816Z",
+      "recordingKey": "record:schedule:eb3344ba220143ea@msu-schedule"
+    },
+    {
+      "id": "schedule:4fefca431d9f39cd@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "4fefca431d9f39cd@msu-schedule",
+      "scheduledStartsAt": "2026-11-24T09:00:00+03:00",
+      "startedAt": "2026-11-24T09:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "История России",
+      "courseType": "Сем",
+      "title": "История России",
+      "instructor": "Нестерова Ксения Александровна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 1,
+      "updatedAt": "2026-11-24T07:30:28.620Z"
     }
   ]
 }
