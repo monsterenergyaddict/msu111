@@ -1,0 +1,130 @@
+name: Update Plaud lectures
+
+on:
+  schedule:
+    - cron: '17 7-17/2 * * 1-6'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Опубликовать изменения (сначала проверь пробный запуск)'
+        type: boolean
+        default: false
+      pilot:
+        description: 'ID одной записи для проверки (необязательно)'
+        type: string
+        default: ''
+
+# This workflow intentionally never runs for pull requests.
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: plaud-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.PLAUD_SYNC_ENABLED == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Europe/Moscow
+      PLAUD_PRIVATE_DIR: ${{ runner.temp }}/plaud-private
+      PLAUD_TELEMETRY_DISABLED: '1'
+      PLAUD_NO_UPDATE_NOTIFIER: '1'
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned dependencies
+        working-directory: tools/lecture-sync
+        run: |
+          npx --yes pnpm@11.25.0 install --frozen-lockfile --ignore-scripts
+          npx playwright install --with-deps chromium
+      - name: Check synchronization rules
+        working-directory: tools/lecture-sync
+        run: node --test test/*.test.mjs
+      - name: Restore private Plaud connection
+        id: restore
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PLAUD_SESSION_KEY: ${{ secrets.PLAUD_SESSION_KEY }}
+          PLAUD_BOOTSTRAP: ${{ secrets.PLAUD_BOOTSTRAP }}
+        run: node tools/lecture-sync/src/restore-remote.mjs
+      - name: Collect lectures
+        env:
+          PUBLISH: ${{ github.event_name == 'schedule' || inputs.publish }}
+          PILOT: ${{ inputs.pilot }}
+        run: |
+          args=()
+          if [ "$PUBLISH" = 'true' ]; then args+=(--write); fi
+          if [ -n "$PILOT" ]; then args+=("--pilot=$PILOT"); fi
+          node tools/lecture-sync/src/run.mjs "${args[@]}"
+      - name: Validate public catalog
+        run: node --test site/lectures/tests/*.test.mjs
+      - name: Publish only catalog changes
+        id: commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- site/lectures/data.json; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- site/lectures/data.json
+          git commit -m 'Plaud: обновить каталог лекций'
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push origin HEAD:main
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+      - name: Mark committed links as published
+        if: steps.commit.outcome == 'success'
+        run: node tools/lecture-sync/src/session.mjs mark-published site/lectures/data.json
+      - name: Encrypt refreshed connection
+        id: seal
+        if: always() && steps.restore.outcome == 'success'
+        env:
+          PLAUD_SESSION_KEY: ${{ secrets.PLAUD_SESSION_KEY }}
+        run: node tools/lecture-sync/src/session.mjs save "${{ runner.temp }}/session.enc"
+      - name: Retain only encrypted connection
+        if: always() && steps.seal.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: plaud-session-v1
+          path: ${{ runner.temp }}/session.enc
+          retention-days: 30
+          if-no-files-found: error
+
+  # A commit made with GITHUB_TOKEN does not trigger the separate push workflow.
+  # Deploy explicitly so the public site receives the new catalog.
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
