@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-11-26T07:30:38.247Z",
+  "updatedAt": "2026-11-26T09:15:38.869Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -3885,7 +3885,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 1,
-      "updatedAt": "2026-11-26T07:30:38.247Z"
+      "updatedAt": "2026-11-26T07:30:38.247Z",
+      "recordingKey": "record:schedule:7a6e86f495d6006b@msu-schedule"
+    },
+    {
+      "id": "schedule:a70df18ac9380427@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "a70df18ac9380427@msu-schedule",
+      "scheduledStartsAt": "2026-11-26T10:45:00+03:00",
+      "startedAt": "2026-11-26T10:45:00+03:00",
+      "durationSeconds": 5400,
+      "course": "История мировой философии",
+      "courseType": "Лк",
+      "title": "История мировой философии",
+      "instructor": "Костикова Анна Анатольевна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 2,
+      "updatedAt": "2026-11-26T09:15:38.869Z"
     }
   ]
 }
