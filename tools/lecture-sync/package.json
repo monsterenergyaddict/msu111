@@ -1,0 +1,8 @@
+{
+  "name": "msu-lecture-sync",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test test/*.test.mjs", "sync": "node src/run.mjs", "login": "node src/login.mjs" },
+  "dependencies": { "@plaud-ai/cli": "0.3.15", "playwright": "1.58.2" }
+}
