@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "timeZone": "Europe/Moscow",
-  "updatedAt": "2026-11-27T11:15:48.695Z",
+  "updatedAt": "2026-11-27T13:30:48.730Z",
   "records": [
     {
       "id": "plaud:c9d3eac95b31b7878de5a0041cee1107",
@@ -3975,7 +3975,25 @@
       "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
       "topics": [],
       "lessonNumber": 3,
-      "updatedAt": "2026-11-27T11:15:48.695Z"
+      "updatedAt": "2026-11-27T11:15:48.695Z",
+      "recordingKey": "record:schedule:98ecc52423e5d510@msu-schedule"
+    },
+    {
+      "id": "schedule:3825a992d1ef44ad@msu-schedule",
+      "source": "schedule",
+      "scheduleUid": "3825a992d1ef44ad@msu-schedule",
+      "scheduledStartsAt": "2026-11-27T15:00:00+03:00",
+      "startedAt": "2026-11-27T15:00:00+03:00",
+      "durationSeconds": 5400,
+      "course": "двОсновы работы с информацией",
+      "courseType": "Лк",
+      "title": "двОсновы работы с информацией",
+      "instructor": "Костикова Анна Анатольевна",
+      "status": "processing",
+      "summary": "Занятие добавлено из расписания. Добавь ссылку на запись Plaud, когда она появится.",
+      "topics": [],
+      "lessonNumber": 4,
+      "updatedAt": "2026-11-27T13:30:48.730Z"
     }
   ]
 }
